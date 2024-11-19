@@ -43,7 +43,7 @@ export default function ContactPage() {
 
             {/* Tooltip Content */}
             <div className=" font-[BeautiqueDisplayCondensed] italic absolute left-1/2 -translate-x-1/2 top-28 bg-gray-800 text-white text-nowrap text-sm rounded py-1 px-2 opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500">
-              Go To Lily's Github!
+              Go To Lily&apos;s Github!
               {/* Arrow */}
               <div className="absolute left-1/2 -translate-x-1/2 translate-y-2 bottom-full w-3 h-3 bg-gray-800 rotate-45"></div>
             </div>
@@ -61,7 +61,7 @@ export default function ContactPage() {
 
             {/* Tooltip Content */}
             <div className=" font-[BeautiqueDisplayCondensed] italic absolute left-1/2 -translate-x-1/2 top-28 bg-gray-800 text-white text-nowrap text-sm rounded py-1 px-2 opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500">
-              Go To Lily's LinkedIn!
+              Go To Lily&apos;s LinkedIn!
               {/* Arrow */}
               <div className="absolute left-1/2 -translate-x-1/2 translate-y-2 bottom-full w-3 h-3 bg-gray-800 rotate-45"></div>
             </div>
