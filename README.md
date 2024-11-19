@@ -1,3 +1,43 @@
+## Directory
+src/
+├── app/
+│   ├── layout.tsx           # 전체 애플리케이션의 기본 레이아웃 (TypeScript)
+│   ├── globals.css          # Tailwind CSS 전역 설정
+│   ├── page.tsx             # 기본 홈 페이지 (TypeScript)
+│   ├── project/
+│   │   ├── layout.tsx       # 프로젝트 페이지의 레이아웃
+│   │   └── page.tsx         # 프로젝트 페이지 메인 컴포넌트
+│   └── about/
+│       └── page.tsx         # About 페이지
+│
+├── components/
+│   ├── atoms/
+│   │   ├── Button.tsx
+│   │   └── Input.tsx
+│   ├── molecules/
+│   │   ├── Card.tsx
+│   │   ├── Navbar.tsx
+│   │   └── Footer.tsx
+│   ├── organisms/
+│   │   ├── Header.tsx
+│   │   ├── ProjectSection.tsx
+│   │   └── ContactForm.tsx
+│   └── templates/
+│       ├── MainLayout.tsx
+│       └── ProjectLayout.tsx
+│
+├── hooks/
+│   └── useSomeCustomHook.ts
+├── styles/
+│   ├── globals.css          # Tailwind base 설정, 글로벌 스타일 (Reset 포함)
+│   └── tailwind.css         # Tailwind CSS 전용 설정 파일 (Base, Components, Utilities)
+├── types/
+│   └── index.d.ts           # 글로벌 타입 정의 파일
+└── utils/
+    └── helpers.ts           # 유틸리티 함수
+
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
