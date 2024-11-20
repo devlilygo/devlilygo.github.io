@@ -1,4 +1,4 @@
-import Wireframe from "../atoms/Wireframe";
+import Wireframe from '../atoms/Wireframe';
 
 const Footer = () => {
   return (

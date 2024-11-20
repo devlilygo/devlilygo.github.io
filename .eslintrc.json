@@ -1,6 +1,23 @@
 {
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint", "prettier"],
   "extends": [
     "next/core-web-vitals",
-    "plugin:storybook/recommended"
-  ]
+    "plugin:storybook/recommended",
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended"
+  ],
+  "rules": {
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": [
+      "error",
+      {
+        "vars": "all", // 모든 변수 검사
+        "args": "after-used", // 사용되지 않은 함수 매개변수 감지
+        "ignoreRestSiblings": false // 구조 분해에서 나머지 패턴 검사
+      }
+    ],
+    "prettier/prettier": "error" // Prettier 규칙 위반 시 에러 표시
+  }
 }

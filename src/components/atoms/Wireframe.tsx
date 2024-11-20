@@ -1,20 +1,20 @@
-import classNames from "classnames";
+import classNames from 'classnames';
 
 const styles = {
   container: classNames(
-    "outline-25",
-    "flex",
-    "h-full",
-    "w-full",
-    "items-center",
-    "justify-center",
-    "border",
-    "border-[#ccc]",
-    "text-lg",
-    "font-semibold",
-    "text-gray-500",
-    "outline",
-    "outline-[#ccc]"
+    'outline-25',
+    'flex',
+    'h-full',
+    'w-full',
+    'items-center',
+    'justify-center',
+    'border',
+    'border-[#ccc]',
+    'text-lg',
+    'font-semibold',
+    'text-gray-500',
+    'outline',
+    'outline-[#ccc]'
   ),
 };
 

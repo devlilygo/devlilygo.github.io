@@ -3,16 +3,16 @@
 @tailwind utilities;
 
 .encode-sans-400 {
-  font-family: "Encode Sans", sans-serif;
+  font-family: 'Encode Sans', sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
-  font-variation-settings: "wdth" 100;
+  font-variation-settings: 'wdth' 100;
 }
 
 body {
   display: block;
-  font-family: "Encode Sans", sans-serif;
+  font-family: 'Encode Sans', sans-serif;
 }
 
 @layer components {
@@ -43,83 +43,83 @@ body {
 /* NOTE - FONTS */
 
 @font-face {
-  font-family: "Cafe24MeongiB";
+  font-family: 'Cafe24MeongiB';
   font-weight: 100;
   src: url(../../public/fonts/Cafe24Meongi-B-v1.0.woff2) format(woff2);
 }
 
 @font-face {
-  font-family: "Cafe24MeongiW";
+  font-family: 'Cafe24MeongiW';
   font-weight: 100;
   src: url(../../public/fonts/Cafe24Meongi-W-v1.0.woff2) format(woff2);
 }
 
 @font-face {
-  font-family: "BeautiqueDisplayRegular";
+  font-family: 'BeautiqueDisplayRegular';
   font-weight: 100;
   src: url(../../public/fonts/BeautiqueDisplay-Regular.woff) format(woff);
 }
 
 @font-face {
-  font-family: "BeautiqueDisplayCondensed";
-  src: url("https://db.onlinewebfonts.com/t/5005dc6e6f51d029cdbfd327415ec8fc.eot");
+  font-family: 'BeautiqueDisplayCondensed';
+  src: url('https://db.onlinewebfonts.com/t/5005dc6e6f51d029cdbfd327415ec8fc.eot');
   src:
-    url("https://db.onlinewebfonts.com/t/5005dc6e6f51d029cdbfd327415ec8fc.eot?#iefix")
-      format("embedded-opentype"),
-    url("https://db.onlinewebfonts.com/t/5005dc6e6f51d029cdbfd327415ec8fc.woff2")
-      format("woff2"),
-    url("https://db.onlinewebfonts.com/t/5005dc6e6f51d029cdbfd327415ec8fc.woff")
-      format("woff"),
-    url("https://db.onlinewebfonts.com/t/5005dc6e6f51d029cdbfd327415ec8fc.ttf")
-      format("truetype"),
-    url("https://db.onlinewebfonts.com/t/5005dc6e6f51d029cdbfd327415ec8fc.svg#Beautique Display Condensed")
-      format("svg");
+    url('https://db.onlinewebfonts.com/t/5005dc6e6f51d029cdbfd327415ec8fc.eot?#iefix')
+      format('embedded-opentype'),
+    url('https://db.onlinewebfonts.com/t/5005dc6e6f51d029cdbfd327415ec8fc.woff2')
+      format('woff2'),
+    url('https://db.onlinewebfonts.com/t/5005dc6e6f51d029cdbfd327415ec8fc.woff')
+      format('woff'),
+    url('https://db.onlinewebfonts.com/t/5005dc6e6f51d029cdbfd327415ec8fc.ttf')
+      format('truetype'),
+    url('https://db.onlinewebfonts.com/t/5005dc6e6f51d029cdbfd327415ec8fc.svg#Beautique Display Condensed')
+      format('svg');
 }
 
 @font-face {
-  font-family: "LuloCleanW01One";
-  src: url("https://db.onlinewebfonts.com/t/116d187134420de5733c7c45bbc80c46.eot");
+  font-family: 'LuloCleanW01One';
+  src: url('https://db.onlinewebfonts.com/t/116d187134420de5733c7c45bbc80c46.eot');
   src:
-    url("https://db.onlinewebfonts.com/t/116d187134420de5733c7c45bbc80c46.eot?#iefix")
-      format("embedded-opentype"),
-    url("https://db.onlinewebfonts.com/t/116d187134420de5733c7c45bbc80c46.woff2")
-      format("woff2"),
-    url("https://db.onlinewebfonts.com/t/116d187134420de5733c7c45bbc80c46.woff")
-      format("woff"),
-    url("https://db.onlinewebfonts.com/t/116d187134420de5733c7c45bbc80c46.ttf")
-      format("truetype"),
-    url("https://db.onlinewebfonts.com/t/116d187134420de5733c7c45bbc80c46.svg#Lulo Clean W01 One")
-      format("svg");
+    url('https://db.onlinewebfonts.com/t/116d187134420de5733c7c45bbc80c46.eot?#iefix')
+      format('embedded-opentype'),
+    url('https://db.onlinewebfonts.com/t/116d187134420de5733c7c45bbc80c46.woff2')
+      format('woff2'),
+    url('https://db.onlinewebfonts.com/t/116d187134420de5733c7c45bbc80c46.woff')
+      format('woff'),
+    url('https://db.onlinewebfonts.com/t/116d187134420de5733c7c45bbc80c46.ttf')
+      format('truetype'),
+    url('https://db.onlinewebfonts.com/t/116d187134420de5733c7c45bbc80c46.svg#Lulo Clean W01 One')
+      format('svg');
 }
 
 @font-face {
-  font-family: "LuloCleanOneBold";
-  src: url("https://db.onlinewebfonts.com/t/164a60c2e090248befbcf32fdd5af386.eot");
+  font-family: 'LuloCleanOneBold';
+  src: url('https://db.onlinewebfonts.com/t/164a60c2e090248befbcf32fdd5af386.eot');
   src:
-    url("https://db.onlinewebfonts.com/t/164a60c2e090248befbcf32fdd5af386.eot?#iefix")
-      format("embedded-opentype"),
-    url("https://db.onlinewebfonts.com/t/164a60c2e090248befbcf32fdd5af386.woff2")
-      format("woff2"),
-    url("https://db.onlinewebfonts.com/t/164a60c2e090248befbcf32fdd5af386.woff")
-      format("woff"),
-    url("https://db.onlinewebfonts.com/t/164a60c2e090248befbcf32fdd5af386.ttf")
-      format("truetype"),
-    url("https://db.onlinewebfonts.com/t/164a60c2e090248befbcf32fdd5af386.svg#Lulo Clean One Bold")
-      format("svg");
+    url('https://db.onlinewebfonts.com/t/164a60c2e090248befbcf32fdd5af386.eot?#iefix')
+      format('embedded-opentype'),
+    url('https://db.onlinewebfonts.com/t/164a60c2e090248befbcf32fdd5af386.woff2')
+      format('woff2'),
+    url('https://db.onlinewebfonts.com/t/164a60c2e090248befbcf32fdd5af386.woff')
+      format('woff'),
+    url('https://db.onlinewebfonts.com/t/164a60c2e090248befbcf32fdd5af386.ttf')
+      format('truetype'),
+    url('https://db.onlinewebfonts.com/t/164a60c2e090248befbcf32fdd5af386.svg#Lulo Clean One Bold')
+      format('svg');
 }
 
 @font-face {
-  font-family: "HelveticaNeueRegular";
-  src: url("https://db.onlinewebfonts.com/t/0d49fc455f4a8951a42daf952412a713.eot");
+  font-family: 'HelveticaNeueRegular';
+  src: url('https://db.onlinewebfonts.com/t/0d49fc455f4a8951a42daf952412a713.eot');
   src:
-    url("https://db.onlinewebfonts.com/t/0d49fc455f4a8951a42daf952412a713.eot?#iefix")
-      format("embedded-opentype"),
-    url("https://db.onlinewebfonts.com/t/0d49fc455f4a8951a42daf952412a713.woff2")
-      format("woff2"),
-    url("https://db.onlinewebfonts.com/t/0d49fc455f4a8951a42daf952412a713.woff")
-      format("woff"),
-    url("https://db.onlinewebfonts.com/t/0d49fc455f4a8951a42daf952412a713.ttf")
-      format("truetype"),
-    url("https://db.onlinewebfonts.com/t/0d49fc455f4a8951a42daf952412a713.svg#Helvetica Neue Regular")
-      format("svg");
+    url('https://db.onlinewebfonts.com/t/0d49fc455f4a8951a42daf952412a713.eot?#iefix')
+      format('embedded-opentype'),
+    url('https://db.onlinewebfonts.com/t/0d49fc455f4a8951a42daf952412a713.woff2')
+      format('woff2'),
+    url('https://db.onlinewebfonts.com/t/0d49fc455f4a8951a42daf952412a713.woff')
+      format('woff'),
+    url('https://db.onlinewebfonts.com/t/0d49fc455f4a8951a42daf952412a713.ttf')
+      format('truetype'),
+    url('https://db.onlinewebfonts.com/t/0d49fc455f4a8951a42daf952412a713.svg#Helvetica Neue Regular')
+      format('svg');
 }

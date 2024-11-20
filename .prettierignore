@@ -1,2 +1,5 @@
 #Ignore file
 README.md
+node_modules
+.next
+out
