@@ -1,6 +1,7 @@
 import classNames from 'classnames';
 import Link from 'next/link';
 import ThemeToggle from '../atoms/ThemeToggle';
+import SnowToggle from '../atoms/SnowToggle';
 
 const style = {
   Links: classNames(
@@ -39,8 +40,9 @@ const Header = () => {
       <div className="flex w-full pl-10 justify-end items-center font-[LuloCleanW01One] text-xs text-nowrap">
         From Seoul to Toronto: <br />
         Coding Dreams Into Reality
-        <div className="flex w-60 items-center justify-center mr-4 ml-8">
+        <div className="flex w-full items-center justify-center mr-4 ml-8">
           <ThemeToggle />
+          <SnowToggle />
         </div>
       </div>
     </div>
