@@ -1,7 +1,6 @@
 'use client';
 
 import classNames from 'classnames';
-import Image from 'next/image';
 
 const style = {
   NameArea: classNames(

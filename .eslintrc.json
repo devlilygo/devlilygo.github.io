@@ -6,7 +6,7 @@
     "plugin:storybook/recommended",
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
-    "plugin:prettier/recommended"
+    "prettier" // Prettier와 충돌 방지
   ],
   "rules": {
     "no-unused-vars": "off",
