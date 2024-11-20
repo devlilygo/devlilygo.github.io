@@ -1,6 +1,6 @@
 import classNames from 'classnames';
 import Link from 'next/link';
-import DarkModeToggle from '../atoms/DarkModeToggle';
+import ThemeToggle from '../atoms/ThemeToggle';
 
 const style = {
   Links: classNames(
@@ -18,9 +18,9 @@ const style = {
 
 const Header = () => {
   return (
-    <div className="flex h-24 w-full border-b-[0.5px] justify-between items-center border-black dark:border-white">
+    <div className="flex h-24 w-full border-b-[0.5px] justify-between items-center">
       {/* NOTE - Navigation */}
-      <header className="flex w-full p-10 justify-start font-[LuloCleanW01One]">
+      <header className="flex w-full pl-10 justify-start font-[LuloCleanW01One]">
         <nav className="flex">
           <Link className={style.Links} href="/">
             About
@@ -32,16 +32,16 @@ const Header = () => {
             Contact
           </Link>
         </nav>
-        <div className="flex w-36 items-center justify-center">
-          <DarkModeToggle />
-        </div>
       </header>
-      <div className="flex w-full p-10 text-xl justify-center font-[BeautiqueDisplayCondensed] italic">
+      <div className="flex w-full pl-10 pr-10 text-xl justify-center font-[BeautiqueDisplayCondensed] italic">
         Lily Go
       </div>
-      <div className="flex w-full p-10 pr-15 justify-end font-[LuloCleanW01One] text-xs text-nowrap">
+      <div className="flex w-full pl-10 justify-end items-center font-[LuloCleanW01One] text-xs text-nowrap">
         From Seoul to Toronto: <br />
         Coding Dreams Into Reality
+        <div className="flex w-60 items-center justify-center mr-4 ml-8">
+          <ThemeToggle />
+        </div>
       </div>
     </div>
   );

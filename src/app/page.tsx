@@ -38,14 +38,14 @@ export default function HomePage() {
             <div className="text-4xl italic font-[LuloCleanW01One] mb-5 ml-3 items-center">
               Insight
             </div>
-            <div className="flex w-full max-w-[400px] border-b-[1px] p-3 items-center justify-between border-black dark:border-white">
+            <div className="flex w-full max-w-[400px] border-b-[1px] p-3 items-center justify-between">
               <div>Services</div>
               <div className="text-right">
                 React and TypeScript-based
                 <br /> Frontend Development
               </div>
             </div>
-            <div className="flex w-full max-w-[400px] border-b-[1px]  p-3 items-center justify-between border-black dark:border-white">
+            <div className="flex w-full max-w-[400px] border-b-[1px]  p-3 items-center justify-between">
               <div>Industry</div>
               <div className="text-right">
                 Software Development

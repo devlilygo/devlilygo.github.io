@@ -3,8 +3,7 @@ import '../styles/globals.css';
 import Header from '@/components/organisms/Header';
 import Footer from '@/components/organisms/Footer';
 import SnowfallWrapper from '@/components/organisms/SnowfallWrapper';
-import { DarkModeProvider } from '@/components/context/DarkModeContext';
-
+import { ThemeProvider } from '@/components/context/ThemeContext';
 export const metadata: Metadata = {
   title: 'Lily Go - Frontend Developer ',
   description: 'Thank you for visiting :)',
@@ -21,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <DarkModeProvider>
+        <ThemeProvider>
           <div className="h-screen min-h-screen flex flex-col">
             {/* Header */}
             <Header />
@@ -35,7 +34,7 @@ export default function RootLayout({
             {/* Footer */}
             <Footer />
           </div>
-        </DarkModeProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

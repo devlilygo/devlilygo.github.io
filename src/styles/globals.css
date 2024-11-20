@@ -3,15 +3,24 @@
 @tailwind utilities;
 
 /* NOTE - DARK MODE */
+/* 기본 스타일 */
 html {
-  @apply bg-white text-black border-black transition-colors duration-300 ease-in-out;
-
-  display: block;
-  font-family: 'Encode Sans', sans-serif;
+  @apply bg-white text-black transition-colors duration-300;
 }
 
+/* 다크 모드 */
 html.dark {
-  @apply bg-[#1E1E1E] text-white border-white;
+  @apply bg-dark-background text-dark-text;
+}
+
+/* 크리스마스 테마 */
+html.christmas {
+  @apply bg-christmas-green text-christmas-white;
+}
+
+/* 다크 모드 + 크리스마스 테마 */
+html.dark.christmas {
+  @apply bg-christmas-red text-christmas-gold;
 }
 
 .encode-sans-400 {
