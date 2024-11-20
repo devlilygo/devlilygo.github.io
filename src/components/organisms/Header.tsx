@@ -1,5 +1,6 @@
 import classNames from 'classnames';
 import Link from 'next/link';
+import DarkModeToggle from '../atoms/DarkModeToggle';
 
 const style = {
   Links: classNames(
@@ -9,13 +10,15 @@ const style = {
     'hover:bg-slate-100 ',
     'cursor-pointer',
     'justify-between',
-    'items-center'
+    'items-center',
+    'dark:hover:bg-slate-600',
+    'rounded'
   ),
 };
 
 const Header = () => {
   return (
-    <div className="flex h-24 w-full border-b-[0.5px] border-black justify-between items-center">
+    <div className="flex h-24 w-full border-b-[0.5px] justify-between items-center border-black dark:border-white">
       {/* NOTE - Navigation */}
       <header className="flex w-full p-10 justify-start font-[LuloCleanW01One]">
         <nav className="flex">
@@ -29,6 +32,9 @@ const Header = () => {
             Contact
           </Link>
         </nav>
+        <div className="flex w-36 items-center justify-center">
+          <DarkModeToggle />
+        </div>
       </header>
       <div className="flex w-full p-10 text-xl justify-center font-[BeautiqueDisplayCondensed] italic">
         Lily Go
