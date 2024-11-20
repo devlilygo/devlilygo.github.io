@@ -1,6 +1,6 @@
-"use client";
+'use client';
 
-import Construction from "../../images/construction-tools-svgrepo-com.svg";
+import Construction from '../../images/construction-tools-svgrepo-com.svg';
 
 export default function Project() {
   return (

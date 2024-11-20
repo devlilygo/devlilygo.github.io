@@ -1,15 +1,15 @@
-import classNames from "classnames";
-import Link from "next/link";
+import classNames from 'classnames';
+import Link from 'next/link';
 
 const style = {
   Links: classNames(
-    "flex",
-    "flex-col",
-    "p-2",
-    "hover:bg-slate-100 ",
-    "cursor-pointer",
-    "justify-between",
-    "items-center"
+    'flex',
+    'flex-col',
+    'p-2',
+    'hover:bg-slate-100 ',
+    'cursor-pointer',
+    'justify-between',
+    'items-center'
   ),
 };
 

@@ -1,26 +1,25 @@
-"use client";
+'use client';
 
-import classNames from "classnames";
-import Image from "next/image";
+import classNames from 'classnames';
 
 const style = {
   NameArea: classNames(
-    "flex",
-    "flex-col",
-    "min-w-96",
-    "w-full",
-    "h-[60%]",
-    "items-center",
-    "justify-center",
-    "text-[240px]",
-    "font-[BeautiqueDisplayRegular]",
-    "text-nowrap"
+    'flex',
+    'flex-col',
+    'min-w-96',
+    'w-full',
+    'h-[60%]',
+    'items-center',
+    'justify-center',
+    'text-[240px]',
+    'font-[BeautiqueDisplayRegular]',
+    'text-nowrap'
   ),
   InsightArea: classNames(
-    "flex",
-    "flex-col",
-    "w-[800px]",
-    "p-10"
+    'flex',
+    'flex-col',
+    'w-[800px]',
+    'p-10'
     // "justify-center"
   ),
 };
