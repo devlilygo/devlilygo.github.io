@@ -2,17 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
+/* NOTE - DARK MODE */
+html {
+  @apply bg-white text-black border-black transition-colors duration-300 ease-in-out;
+
+  display: block;
+  font-family: 'Encode Sans', sans-serif;
+}
+
+html.dark {
+  @apply bg-[#1E1E1E] text-white border-white;
+}
+
 .encode-sans-400 {
   font-family: 'Encode Sans', sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
   font-variation-settings: 'wdth' 100;
-}
-
-body {
-  display: block;
-  font-family: 'Encode Sans', sans-serif;
 }
 
 @layer components {

@@ -28,7 +28,7 @@ export default function HomePage() {
   return (
     <div className="flex flex-col h-full w-full items-center justify-between">
       {/* NOTE - Body */}
-      <div className="flex flex-col h-full w-full p-10">
+      <div className="flex flex-col h-full w-full p-10 ">
         <div className="mainGraphic absolute top-[36%] left-[50%] translate-x-[-50%] translate-y-[-50%] z-[-100]"></div>
         <div className={style.NameArea}>Lily G*</div>
 
@@ -38,14 +38,14 @@ export default function HomePage() {
             <div className="text-4xl italic font-[LuloCleanW01One] mb-5 ml-3 items-center">
               Insight
             </div>
-            <div className="flex w-full max-w-[400px] border-b-[1px] border-black p-3 items-center justify-between">
+            <div className="flex w-full max-w-[400px] border-b-[1px] p-3 items-center justify-between border-black dark:border-white">
               <div>Services</div>
               <div className="text-right">
                 React and TypeScript-based
                 <br /> Frontend Development
               </div>
             </div>
-            <div className="flex w-full max-w-[400px] border-b-[1px] border-black p-3 items-center justify-between">
+            <div className="flex w-full max-w-[400px] border-b-[1px]  p-3 items-center justify-between border-black dark:border-white">
               <div>Industry</div>
               <div className="text-right">
                 Software Development
