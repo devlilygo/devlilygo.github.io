@@ -15,12 +15,12 @@ html.dark {
 
 /* 크리스마스 테마 */
 html.christmas {
-  @apply bg-christmas-green text-christmas-white;
+  @apply bg-christmas-red text-christmas-gold;
 }
 
 /* 다크 모드 + 크리스마스 테마 */
 html.dark.christmas {
-  @apply bg-christmas-red text-christmas-gold;
+  @apply bg-christmas-green text-christmas-white;
 }
 
 .encode-sans-400 {

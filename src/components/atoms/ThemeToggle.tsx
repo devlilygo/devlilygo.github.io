@@ -1,29 +1,40 @@
 'use client';
 
 import { useTheme } from '@/components/context/ThemeContext';
+import ChristmasIcon from '@/images/winter-hat-christmas-svgrepo-com.svg';
+import ChristmasIconBW from '@/images/winter-hat-christmas-svgrepo-com-black-and-white.svg';
+import LightModeIcon from '@/images/moon-sun-svgrepo-com-light.svg';
+import DarkModeIcon from '@/images/moon-sun-svgrepo-com-dark.svg';
 
 export default function ThemeToggle() {
   const { isDarkMode, isChristmas, toggleDarkMode, toggleChristmasTheme } =
     useTheme();
 
   return (
-    <div className="flex flex-col w-full h-full gap-2 text-xs justify-between items-center text-nowrap">
-      <button
-        onClick={toggleDarkMode}
-        className={`py-2 px-4 rounded mr-2 ml-2 italic ${
-          isDarkMode ? 'bg-gray-800 text-white' : 'bg-gray-200 text-black'
-        }`}
-      >
-        {isDarkMode ? 'Light Mode' : 'Dark Mode'}
-      </button>
-      <button
-        onClick={toggleChristmasTheme}
-        className={`py-2 px-4 rounded mr-2 ml-2 italic ${
-          isChristmas ? 'bg-red-500 text-white' : 'bg-green-500 text-white'
-        }`}
-      >
-        {isChristmas ? 'Turn Off Christmas 🎄' : 'Turn On Christmas 🎅'}
-      </button>
+    <div className="flex w-full h-full gap-2 text-xs items-center text-nowrap">
+      {isDarkMode ? (
+        <LightModeIcon
+          className="w-16 h-16 p-2 hover:cursor-pointer"
+          onClick={toggleDarkMode}
+        />
+      ) : (
+        <DarkModeIcon
+          className="w-16 h-16 p-2 hover:cursor-pointer"
+          onClick={toggleDarkMode}
+        />
+      )}
+
+      {isChristmas ? (
+        <ChristmasIcon
+          className="w-16 h-16 p-2 hover:cursor-pointer"
+          onClick={toggleChristmasTheme}
+        />
+      ) : (
+        <ChristmasIconBW
+          className="w-16 h-16 p-2 hover:cursor-pointer"
+          onClick={toggleChristmasTheme}
+        />
+      )}
     </div>
   );
 }
