@@ -1,12 +1,15 @@
 'use client';
 
-import Construction from '../../images/construction-tools-svgrepo-com.svg';
+import TimelineSection from '@/components/organisms/TimelineSection';
 
-export default function Project() {
+// import Construction from '../../images/construction-tools-svgrepo-com.svg';
+
+export default function Works() {
   return (
-    <div className="flex flex-col h-full w-full items-center justify-center font-[LuloCleanW01One]">
-      <Construction className="w-24 h-24 p-4" />
-      ...Under Construction...
+    <div className="flex flex-col h-full w-full items-center justify-center font-[LuloCleanW01One] overflow-y-auto">
+      {/* <Construction className="w-24 h-24 p-4" />
+      ...Under Construction... */}
+      <TimelineSection />
     </div>
   );
 }

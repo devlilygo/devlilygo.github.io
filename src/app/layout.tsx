@@ -20,16 +20,14 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <ThemeProvider>
-          <div className="h-screen min-h-screen flex flex-col">
-            {/* Header */}
-            <Header />
+          {/* Header */}
+          <Header />
 
-            {/* Content Area */}
-            <main className="flex-grow w-full p-4">{children}</main>
+          {/* Content Area */}
+          <main>{children}</main>
 
-            {/* Footer */}
-            <Footer />
-          </div>
+          {/* Footer */}
+          <Footer />
         </ThemeProvider>
       </body>
     </html>

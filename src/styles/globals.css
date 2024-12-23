@@ -5,7 +5,7 @@
 /* NOTE - DARK MODE */
 /* 기본 스타일 */
 html {
-  @apply bg-white text-black transition-colors duration-300;
+  @apply bg-white text-black transition-colors duration-300 overflow-hidden;
 }
 
 /* 다크 모드 */
@@ -72,8 +72,34 @@ html.dark.christmas {
 
 @font-face {
   font-family: 'BeautiqueDisplayRegular';
-  font-weight: 100;
-  src: url(../../public/fonts/BeautiqueDisplay-Regular.woff) format(woff);
+  src: url('https://db.onlinewebfonts.com/t/08ee0bdd19b93bb20a3ce6c8be5ebf8b.eot');
+  src:
+    url('https://db.onlinewebfonts.com/t/08ee0bdd19b93bb20a3ce6c8be5ebf8b.eot?#iefix')
+      format('embedded-opentype'),
+    url('https://db.onlinewebfonts.com/t/08ee0bdd19b93bb20a3ce6c8be5ebf8b.woff2')
+      format('woff2'),
+    url('https://db.onlinewebfonts.com/t/08ee0bdd19b93bb20a3ce6c8be5ebf8b.woff')
+      format('woff'),
+    url('https://db.onlinewebfonts.com/t/08ee0bdd19b93bb20a3ce6c8be5ebf8b.ttf')
+      format('truetype'),
+    url('https://db.onlinewebfonts.com/t/08ee0bdd19b93bb20a3ce6c8be5ebf8b.svg#Beautique Display')
+      format('svg');
+}
+
+@font-face {
+  font-family: 'BeautiqueDisplayMedium';
+  src: url('https://db.onlinewebfonts.com/t/3b9261380d0c598565ec859fb58757a8.eot');
+  src:
+    url('https://db.onlinewebfonts.com/t/3b9261380d0c598565ec859fb58757a8.eot?#iefix')
+      format('embedded-opentype'),
+    url('https://db.onlinewebfonts.com/t/3b9261380d0c598565ec859fb58757a8.woff2')
+      format('woff2'),
+    url('https://db.onlinewebfonts.com/t/3b9261380d0c598565ec859fb58757a8.woff')
+      format('woff'),
+    url('https://db.onlinewebfonts.com/t/3b9261380d0c598565ec859fb58757a8.ttf')
+      format('truetype'),
+    url('https://db.onlinewebfonts.com/t/3b9261380d0c598565ec859fb58757a8.svg#Beautique Display Medium')
+      format('svg');
 }
 
 @font-face {
