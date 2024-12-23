@@ -45,7 +45,7 @@ const style = {
 
 export default function ContactPage() {
   return (
-    <div className="flex flex-col w-full h-full p-4 justify-center items-center">
+    <div className="flex flex-col w-full h-[calc(100vh-4rem-6rem)] p-4 justify-center items-center">
       <div className="mainGraphic absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] z-[-100]"></div>
       <h1 className="text-2xl font-[LuloCleanOneBold] mb-4">Contact Me</h1>
       <p className="mb-4 text-xs font-[LuloCleanW01One] p-4 text-nowrap">
