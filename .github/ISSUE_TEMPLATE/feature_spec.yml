@@ -1,0 +1,39 @@
+name: "Feature Spec 📦"
+description: "Define the feature you want to implement and outline it before starting."
+title: "[feat] "
+labels: [feat]
+body:
+  - type: textarea
+    id: summary
+    attributes:
+      label: "📌 What is the feature?"
+      placeholder: "e.g., Reward selection screen UI and unlock logic."
+    validations:
+      required: true
+
+  - type: textarea
+    id: flow
+    attributes:
+      label: "🔁 Expected user flow (optional)"
+      placeholder: "e.g., Home > Reach XP > Click reward button > Reward selection screen"
+    validations:
+      required: false
+
+  - type: textarea
+    id: data
+    attributes:
+      label: "🧩 Required data or state (optional)"
+      placeholder: "XP value, reward list, unlock conditions, etc."
+    validations:
+      required: false
+
+  - type: textarea
+    id: checklist
+    attributes:
+      label: "✅ Tasks to implement (Checklist)"
+      placeholder: |
+        - [ ] Build the UI
+        - [ ] Connect unlock conditions
+        - [ ] Add animation on click
+    validations:
+      required: false
