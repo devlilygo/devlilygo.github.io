@@ -1,5 +1,5 @@
 # ---------------------
-# <type>(optional scope): Commit message title (can be in English or Korean)
+# <type>(optional scope): Commit message title
 
 # ---------------------
 # Description (optional) – What and why did you change?
