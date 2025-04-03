@@ -40,9 +40,9 @@ const HomeTemplate = () => {
       <Card className={styles.cardContainer}>
         <CardHeader className={styles.cardHeader}>
           <CardTitle className={styles.cardTitle}>
-            Hello, I&apos;m Lily 🌷
+            Welcome to Dailily 🌷
             <CardDescription className="italic">
-              “I make small things, every single day.”
+              Daily Lily’s personal space for tiny wins
             </CardDescription>
           </CardTitle>
           <CardDescription className="text-muted-foreground">
