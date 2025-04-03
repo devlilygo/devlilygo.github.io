@@ -22,7 +22,7 @@ const styles = {
     "w-full",
     "items-center",
     "justify-center",
-    "bg-[#FFFBEC]"
+    "bg-background"
   ),
   cardContainer: classNames("w-[1024px]", "h-[720px]", "mx-auto", "px-4"),
   cardHeader: classNames("flex", "justify-between", "items-center"),
