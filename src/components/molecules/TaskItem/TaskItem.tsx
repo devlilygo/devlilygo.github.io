@@ -1,20 +1,17 @@
 import { Checkbox } from "@/components/ui/checkbox";
+import { Label } from "@/components/ui/label";
 
-const TaskItem = ({
-  label,
-  checked = false,
-}: {
-  label: string;
-  checked?: boolean;
-}) => {
+interface TaskItemProps {
+  text: string;
+  done: boolean;
+  onToggle: () => void;
+}
+
+export default function TaskItem({ text, done, onToggle }: TaskItemProps) {
   return (
-    <li className="flex items-center space-x-2">
-      <Checkbox defaultChecked={checked} />
-      <span className={checked ? "line-through text-muted-foreground" : ""}>
-        {label}
-      </span>
-    </li>
+    <div className="flex items-center gap-2 my-2">
+      <Checkbox checked={done} onCheckedChange={onToggle} />
+      <Label className="bg-transparent outline-none flex-1">{text}</Label>
+    </div>
   );
-};
-
-export default TaskItem;
+}

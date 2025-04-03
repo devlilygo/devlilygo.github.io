@@ -24,7 +24,13 @@ const styles = {
     "justify-center",
     "bg-background"
   ),
-  cardContainer: classNames("w-[1024px]", "h-[720px]", "mx-auto", "px-4"),
+  cardContainer: classNames(
+    "w-[1024px]",
+    "h-[720px]",
+    "mx-auto",
+    "p-4",
+    "gap-4"
+  ),
   cardHeader: classNames("flex", "justify-between", "items-center"),
   cardTitle: classNames("text-4xl"),
   cardContent: classNames("flex", "flex-col", "w-full", "h-full", "gap-4"),
@@ -40,7 +46,10 @@ const HomeTemplate = () => {
       <Card className={styles.cardContainer}>
         <CardHeader className={styles.cardHeader}>
           <CardTitle className={styles.cardTitle}>
-            Welcome to Dailily 🌷
+            <span className="text-6xl font-handwriting">W</span>elco
+            <span className="text-6xl font-handwriting">m</span>e to
+            <span className="text-6xl font-handwriting">D</span>
+            ailil<span className="text-6xl font-handwriting">y</span> 🌷
             <CardDescription className="italic">
               Daily Lily’s personal space for tiny wins
             </CardDescription>

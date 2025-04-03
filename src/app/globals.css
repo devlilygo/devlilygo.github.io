@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Great+Vibes&family=Pinyon+Script&display=swap");
 @import "tailwindcss";
 @import "tw-animate-css";
 
@@ -21,6 +22,12 @@ input,
 textarea {
   font-family: inherit;
   outline: none;
+}
+
+.font-handwriting {
+  font-family: "Pinyon Script", cursive;
+  font-weight: 400;
+  font-style: normal;
 }
 
 @custom-variant dark (&:is(.dark *));

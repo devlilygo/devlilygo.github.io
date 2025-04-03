@@ -15,6 +15,10 @@ interface CalendarDay {
   emoji?: string;
 }
 
+export function getFormattedMonthYear(date: Date): string {
+  return format(date, "MMMM yyyy"); // 예: "April 2025"
+}
+
 export function generateCalendarDays(baseDate: Date): CalendarDay[] {
   const start = startOfMonth(baseDate);
   const end = endOfMonth(baseDate);
@@ -35,7 +39,7 @@ export function generateCalendarDays(baseDate: Date): CalendarDay[] {
     key: format(d, "yyyy-MM-dd"),
     dayNumber: d.getDate(),
     date: d,
-    emoji: "🌑", // default placeholder
+    // emoji: "🌑", // default placeholder
   }));
 
   return [...placeholders, ...calendarDays];
