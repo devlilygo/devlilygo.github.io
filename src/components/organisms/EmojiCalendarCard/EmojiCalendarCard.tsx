@@ -1,6 +1,6 @@
 import { CalendarDay } from "@/components/molecules/CalendarDay/CalendarDay";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
-import { generateCalendarDays } from "@/lib/utils/calendar";
+import { generateCalendarDays, getFormattedMonthYear } from "@/utils/calendar";
 
 export function EmojiCalendarCard() {
   const today = new Date();
@@ -8,9 +8,11 @@ export function EmojiCalendarCard() {
   const weekdays = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
   return (
-    <Card className="h-[320px] w-[464px] rounded-xl text-sm px-4 py-6">
-      <CardHeader className="gap-0">
-        <CardTitle>📆 April 2025</CardTitle>
+    <Card className="h-[320px] w-[464px] rounded-xl text-sm px-4 py-6 gap-2">
+      <CardHeader>
+        <CardTitle className="text-lg">
+          📆 {getFormattedMonthYear(today)}
+        </CardTitle>
       </CardHeader>
       <CardContent>
         <div className="grid grid-cols-7 gap-[2px]">
@@ -29,7 +31,8 @@ export function EmojiCalendarCard() {
             day.dayNumber ? (
               <CalendarDay
                 key={day.key}
-                day={day.dayNumber}
+                day={day.key}
+                dayNumber={day.dayNumber}
                 emoji={day.emoji}
               />
             ) : (
