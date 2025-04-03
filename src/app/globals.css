@@ -1,6 +1,28 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+html,
+body {
+  height: 100%;
+  width: 100%;
+  min-height: 100dvh; /* 모바일 뷰포트 대응 */
+  min-width: 100dvw; /* 모바일 뷰포트 대응 */
+  font-family: "Pretendard", sans-serif;
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
+/* 버튼, 입력 초기화 */
+button {
+  cursor: pointer;
+}
+
+input,
+textarea {
+  font-family: inherit;
+  outline: none;
+}
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {

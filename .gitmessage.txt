@@ -1,0 +1,28 @@
+# ---------------------
+# <type>(optional scope): Commit message title (can be in English or Korean)
+
+# ---------------------
+# Description (optional) – What and why did you change?
+
+# Example:
+# feat: Implement UI for quest creation screen
+# fix: Fix bug where XP was not saved
+# refactor: Refactor quest card logic
+# chore: Clean up Tailwind config file
+
+# Types:
+#   feat      - New feature
+#   fix       - Bug fix
+#   refactor  - Code refactoring (no feature change)
+#   style     - UI styles, CSS, etc.
+#   chore     - Chores like config/environment setup
+#   docs      - Writing or editing documentation
+
+# Notes:
+#   - Keep the title under 50 characters
+#   - Start with a lowercase letter
+#   - Do NOT use a period at the end
+# ---------------------
+
+
+
