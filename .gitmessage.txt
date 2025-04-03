@@ -23,6 +23,3 @@
 #   - Start with a lowercase letter
 #   - Do NOT use a period at the end
 # ---------------------
-
-
-
