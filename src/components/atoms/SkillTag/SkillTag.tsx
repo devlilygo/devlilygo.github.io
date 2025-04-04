@@ -1,10 +1,18 @@
 import { Badge } from "@/components/ui/badge";
 
-export function SkillTag({ label }: { label: string }) {
+export function SkillTag({
+  label,
+  bgColor,
+  textColor,
+}: {
+  label: string;
+  bgColor: string;
+  textColor: string;
+}) {
   return (
     <Badge
       variant="secondary"
-      className="rounded-full px-2 py-1 text-xs font-normal"
+      className={`rounded-sm px-[2px] py-[1px] text-xs font-bold ${bgColor} ${textColor}`}
     >
       {label}
     </Badge>
