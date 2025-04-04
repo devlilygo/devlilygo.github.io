@@ -24,6 +24,13 @@ textarea {
   outline: none;
 }
 
+body {
+  background-image: url("/pattern2.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .font-handwriting {
   font-family: "Pinyon Script", cursive;
   font-weight: 400;
@@ -75,7 +82,7 @@ textarea {
 :root {
   --radius: 0.625rem;
 
-  --background: #fff9e0;
+  --background: #f7fafc;
   --foreground: #2c3e50;
   --card: #ffffff;
   --card-foreground: #2c3e50;
