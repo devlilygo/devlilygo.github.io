@@ -6,11 +6,11 @@ export interface VisitorMessage {
 
 export function MessageItem({ message, created_at }: VisitorMessage) {
   return (
-    <div className="flex p-2 m-1 ml-0 rounded bg-muted items-center">
-      <div className="flex w-8 pl-1 text-sm text-muted-foreground items-center justify-between">
+    <div className="flex m-1 ml-0 rounded bg-muted items-center">
+      <div className="flex w-8 text-sm text-muted-foreground items-center justify-center">
         💬
       </div>
-      <div className="flex mr-3 text-base italic items-center break-all w-[30ch]">
+      <div className="flex mr-3 text-sm italic items-center break-all w-[38ch]">
         {message}
       </div>
       <div className="flex w-10 text-sm text-muted-foreground justify-end items-center">
