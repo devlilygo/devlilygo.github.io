@@ -2,20 +2,20 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Dailily — Daily Lily 🩵",
+  title: "Lilyinit 🩵",
   description: "Daily Lily, softly growing 🩵",
   openGraph: {
-    title: "🩵 Dailily — Daily Lily",
+    title: "🩵 Lilyinit",
     description:
-      "Welcome to Dailily — Daily Lily’s personal space for tiny wins.",
+      "Welcome to Lilyinit — Daily Lily’s personal space for tiny wins.",
     url: "https://lilygo.vercel.app",
-    siteName: "Dailily",
+    siteName: "Lilyinit",
     images: [
       {
         url: "/og.png",
         width: 1200,
         height: 630,
-        alt: "Dailily by Lily",
+        alt: "Lilyinit by Lily",
       },
     ],
     locale: "en_US",
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "🩵 Dailily — Daily Lily",
+    title: "🩵 Lilyinit",
     description: "Daily Lily, softly growing 🩵",
     images: ["/og.png"],
   },

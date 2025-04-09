@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Great+Vibes&family=Pinyon+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Great+Vibes&family=Pinyon+Script&family=Fira+Mono:wght@400;500;700&family=Fira+Mono:wght@400;500;700&family=Press+Start+2P&display=swap");
 @import "tailwindcss";
 @import "tw-animate-css";
 
@@ -33,6 +33,18 @@ body {
 
 .font-handwriting {
   font-family: "Pinyon Script", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.font-coding {
+  font-family: "Fira Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.font-8bit {
+  font-family: "Press Start 2P", system-ui;
   font-weight: 400;
   font-style: normal;
 }

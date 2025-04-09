@@ -47,10 +47,10 @@ const styles = {
   cardFooter: classNames("flex", "justify-between"),
   footerContainer: classNames(
     "absolute",
-    "bottom-0",
+    "bottom-5",
     "flex",
     "flex-col",
-    "h-[100px]",
+    "h-[60px]",
     "w-full",
     "items-center",
     "justify-start"
@@ -68,18 +68,18 @@ const HomeTemplate = () => {
               <div className="flex items-center">
                 <span className="text-6xl font-handwriting">W</span>elco
                 <span className="text-6xl font-handwriting">m</span>e to
-                <span className="text-6xl font-handwriting">D</span>
-                ailil<span className="text-6xl font-handwriting">y</span>
+                <span className="text-6xl font-handwriting">L</span>
+                ily<span className="text-6xl font-handwriting">i</span>nit
                 <Image
                   className="ml-2 pb-2"
-                  alt="flower"
-                  src="/images/flower.png"
+                  alt="lilyinit"
+                  src="/images/lilyinit.png"
                   width={50}
                   height={50}
                 />
               </div>
-              <CardDescription className="italic">
-                Daily Lily’s personal space for tiny wins
+              <CardDescription className="italic font-coding text-xs">
+                Lilyinit(): where creativity gets initialized.
               </CardDescription>
             </CardTitle>
             <CardDescription className="text-muted-foreground">
@@ -100,7 +100,15 @@ const HomeTemplate = () => {
         </Card>
       </div>
       <div className={styles.footerContainer}>
-        <Image src="/images/dailily.png" alt="logo" width={100} height={100} />
+        <div className="flex items-center justify-center">
+          <Image
+            src="/images/lilyinit_8bit.png"
+            alt="logo"
+            width={40}
+            height={40}
+          />
+          <span className="text-sm font-coding italic">lily.init()</span>
+        </div>
       </div>
     </div>
   );
