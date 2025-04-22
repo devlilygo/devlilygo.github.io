@@ -13,7 +13,7 @@ const Hero = () => {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrent((prev) => (prev + 1) % videos.length);
-    }, 4900); // 5초마다 전환
+    }, 5000); // 5초마다 전환
 
     return () => clearInterval(timer);
   }, []); // ← 주의! 여기 의존성 배열에 current 넣으면 꼬임 발생함
