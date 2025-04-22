@@ -19,7 +19,7 @@ const Hero = () => {
   }, []); // ← 주의! 여기 의존성 배열에 current 넣으면 꼬임 발생함
 
   return (
-    <section className="relative w-full h-screen section-padding flex flex-col items-center justify-center text-center overflow-hidden bg-charcoalGray">
+    <section className="relative w-full h-screen section-padding flex flex-col items-center justify-center text-center overflow-hidden bg-charcoalGray font-fira">
       <div className="absolute top-0 left-0 w-full flex justify-center pt-6 z-10">
         <SeoulToTorontoBar />
       </div>
@@ -72,7 +72,8 @@ const Hero = () => {
           transition={{ delay: 0.3, duration: 1 }}
           className="mt-4 text-xl text-cloudMist"
         >
-          Frontend Developer with a soft aesthetic touch
+          Frontend Developer | Empathetic & Team-spirited | React, TypeScript |
+          8y+
         </motion.p>
 
         <motion.div
@@ -83,28 +84,28 @@ const Hero = () => {
         >
           <a
             href="#projects"
-            className="px-6 py-3 bg-pastelBlue text-cloudMist rounded-lg font-semibold hover:bg-iceBlue transition"
+            className="px-6 py-3 bg-pastelBlue text-cloudMist rounded-lg font-semibold hover:text-charcoalGray hover:opacity-50 transition"
           >
             View Projects
           </a>
           <a
-            href="/resume.pdf"
+            href="/resume_lilygo_202504.pdf"
             target="_blank"
-            className="px-6 py-3 border border-gray-400 text-cloudMist rounded-lg hover:bg-gray-100 transition"
+            className="px-6 py-3 border border-gray-400 text-cloudMist rounded-lg hover:bg-gray-100 hover:opacity-50 hover:text-charcoalGray transition"
           >
             Download Resume
           </a>
         </motion.div>
       </div>
       {/* Scroll indicator */}
-      <motion.div
+      {/* <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 0.8 }}
         transition={{ delay: 1, duration: 1 }}
         className="absolute bottom-6 text-gray-200 animate-bounce cursor-pointer"
       >
         ↓ scroll
-      </motion.div>
+      </motion.div> */}
     </section>
   );
 };

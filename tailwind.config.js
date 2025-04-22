@@ -19,6 +19,7 @@ module.exports = {
         sans: ["Pretendard", "Inter", "sans-serif"],
         ballet: ["Ballet", "cursive"],
         bodoni: ["Bodoni Moda", "serif"],
+        fira: ["Fira Mono", "monospace"],
       },
       keyframes: {
         fadeIn: {
