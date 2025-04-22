@@ -26,9 +26,14 @@ module.exports = {
           "0%": { opacity: "0", transform: "translateY(24px)" },
           "100%": { opacity: "1", transform: "translateY(0)" },
         },
+        highlight: {
+          "0%": { width: "0%" },
+          "100%": { width: "100%" },
+        },
       },
       animation: {
         "fade-in": "fadeIn 1.2s ease-out both",
+        highlight: "highlight 1s ease-out forwards",
       },
     },
   },

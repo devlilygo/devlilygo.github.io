@@ -1,11 +1,12 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { HighlightText } from "../atoms/HighlightText";
 
 export const AboutMe = () => {
   return (
     <section
-      className="relative w-full h-full bg-cover bg-center bg-no-repeat"
+      className="relative w-full bg-cover bg-center bg-no-repeat"
       style={{ backgroundImage: "url('/aboutme.jpg')" }}
     >
       <div className="absolute inset-0 bg-white/70 z-0" />
@@ -23,27 +24,39 @@ export const AboutMe = () => {
             <span className="font-ballet non-italic mr-2">e</span>
           </motion.h2>
 
-          <motion.blockquote
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
-            className="text-xl md:text-xl italic text-gray-700 text-center max-w-7xl mx-auto leading-relaxed"
-          >
+          <div className="text-xl md:text-xl italic text-gray-700 text-center max-w-7xl mx-auto leading-relaxed">
             &quot;I&#39;m a frontend developer with 8+ years of experience,
-            specializing in scalable, data-driven UIs.&quot; <br />
+            specializing in&nbsp;
+            <HighlightText color="yellow">scalable</HighlightText>,&nbsp;
+            <HighlightText color="pink">data-driven</HighlightText>
+            &nbsp;UIs.&quot; <br />
             <br />
-            &quot;I&#39;m familiar with working in environments that handle over
-            20 million user records
-            <br />— where scale, structure, and performance truly matter.&quot;
+            &quot;I&#39;m familiar with working in environments that handle
+            over&nbsp;
+            <HighlightText color="blue">20 million</HighlightText> user records
+            <br />— where&nbsp;
+            <HighlightText color="yellow">
+              scale, structure, and performance
+            </HighlightText>
+            &nbsp;truly matter.&quot;
             <br />
             <br />
-            &quot;From data modeling to scalable dashboards, <br />
-            I&#39;ve transformed complex semiconductor data into meaningful
-            insights.&quot; <br />
+            &quot;From&nbsp;
+            <HighlightText color="yellow">data modeling</HighlightText> to&nbsp;
+            <HighlightText color="pink">
+              scalable dashboards
+            </HighlightText>, <br />
+            I&#39;ve transformed complex&nbsp;
+            <HighlightText color="blue">semiconductor data</HighlightText> into
+            meaningful insights.&quot; <br />
             <br />
-            &quot;I strive to bridge data and experience through thoughtful
-            interfaces.&quot;
-          </motion.blockquote>
+            &quot;I strive to bridge&nbsp;
+            <HighlightText color="blue">data</HighlightText> and&nbsp;
+            <HighlightText color="pink">experience</HighlightText>
+            &nbsp;through&nbsp;
+            <HighlightText color="yellow">thoughtful interfaces</HighlightText>
+            .&quot;
+          </div>
 
           <div className="pt-8 flex flex-col md:flex-row gap-6 justify-center items-center">
             <div className="text-left max-w-6xl space-y-4 text-base">
