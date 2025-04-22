@@ -1,15 +1,11 @@
-// app/page.tsx
-import HomeTemplate from "@/components/templates/HomeTemplate";
-import classNames from "classnames";
-const styles = {
-  container: classNames("flex-col", "h-full", "w-full"),
-};
+import MainTemplate from "@/components/templates/MainTemplate";
 
-/** HOMEPAGE */
-export default function HomePage() {
+export default function Home() {
   return (
-    <main className={styles.container}>
-      <HomeTemplate />
-    </main>
+    <div>
+      <main>
+        <MainTemplate />
+      </main>
+    </div>
   );
 }
