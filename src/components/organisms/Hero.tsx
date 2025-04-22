@@ -98,14 +98,14 @@ const Hero = () => {
         </motion.div>
       </div>
       {/* Scroll indicator */}
-      {/* <motion.div
+      <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 0.8 }}
         transition={{ delay: 1, duration: 1 }}
         className="absolute bottom-6 text-gray-200 animate-bounce cursor-pointer"
       >
         ↓ scroll
-      </motion.div> */}
+      </motion.div>
     </section>
   );
 };
