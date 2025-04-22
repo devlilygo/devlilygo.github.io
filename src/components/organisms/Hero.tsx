@@ -19,7 +19,7 @@ const Hero = () => {
   }, []); // ← 주의! 여기 의존성 배열에 current 넣으면 꼬임 발생함
 
   return (
-    <section className="relative w-full h-screen section-padding flex flex-col items-center justify-center text-center overflow-hidden bg-charcoalGray font-fira">
+    <section className="relative w-full h-full section-padding flex flex-col items-center justify-center text-center overflow-hidden bg-charcoalGray font-fira">
       <div className="absolute top-0 left-0 w-full flex justify-center pt-6 z-10">
         <SeoulToTorontoBar />
       </div>

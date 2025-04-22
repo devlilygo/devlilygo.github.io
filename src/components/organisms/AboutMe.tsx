@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 export const AboutMe = () => {
   return (
     <section
-      className="relative w-full h-screen bg-cover bg-center bg-no-repeat"
+      className="relative w-full h-full bg-cover bg-center bg-no-repeat"
       style={{ backgroundImage: "url('/aboutme.jpg')" }}
     >
       <div className="absolute inset-0 bg-white/70 z-0" />
