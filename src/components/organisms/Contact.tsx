@@ -7,14 +7,14 @@ export const Contact = () => {
   return (
     <section
       id="contact"
-      className="relative min-h-screen flex flex-col justify-center items-center px-6 py-20 bg-[#F8FAFF] text-[#3E4A5C] font-fira"
+      className="relative min-h-screen flex flex-col justify-center items-center px-6 py-20 bg-[#F8FAFF] text-cloudMist font-fira"
     >
       <div
-        className="absolute inset-0 bg-[url('/contacts-bg.jpg')] bg-no-repeat bg-center bg-cover opacity-80 z-0 pointer-events-none"
+        className="absolute inset-0 bg-[url('/images/contacts-bg.jpg')] bg-no-repeat bg-center bg-cover opacity-80 z-0 pointer-events-none"
         aria-hidden="true"
       />
 
-      <div className="absolute inset-0 bg-white/10 z-10 pointer-events-none" />
+      <div className="absolute inset-0 bg-charcoalGray/80 z-10 pointer-events-none" />
 
       <div className="relative z-20 flex flex-col justify-center items-center text-center">
         <h2 className="text-8xl font-bodoni mb-10 italic">

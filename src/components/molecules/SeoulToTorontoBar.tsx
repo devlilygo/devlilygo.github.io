@@ -6,7 +6,7 @@ export default function SeoulToTorontoBar() {
         <span>🇨🇦 Toronto</span>
       </div>
 
-      <div className="relative w-full h-1 bg-white/30 rounded-full overflow-visible">
+      <div className="relative w-full h-1 bg-white/90 rounded-full overflow-visible">
         <div className="absolute left-0 top-[-12px] text-xl animate-plane rotate-emoji">
           ✈️
         </div>

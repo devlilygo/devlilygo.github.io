@@ -2,21 +2,26 @@
 
 import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
+import { useSmartVideo } from "@/hooks/useSmartVideo";
 import SeoulToTorontoBar from "../molecules/SeoulToTorontoBar";
 
-const videos = ["/bg-seoul-5s.mp4", "/bg-toronto-5s.mp4"];
+const videos = [
+  "/videos/optimized-bg-seoul.webm",
+  "/videos/optimized-bg-toronto.webm",
+];
 
 const Hero = () => {
   const [current, setCurrent] = useState(0);
   const videoRef = useRef<HTMLVideoElement>(null);
 
+  useSmartVideo(videoRef, current); // 👈 핵심
+
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrent((prev) => (prev + 1) % videos.length);
-    }, 5000); // 5초마다 전환
-
+    }, 5000);
     return () => clearInterval(timer);
-  }, []); // ← 주의! 여기 의존성 배열에 current 넣으면 꼬임 발생함
+  }, []);
 
   return (
     <section className="relative w-full h-full section-padding flex flex-col items-center justify-center text-center overflow-hidden bg-charcoalGray font-fira">
@@ -24,19 +29,20 @@ const Hero = () => {
         <SeoulToTorontoBar />
       </div>
 
-      {/* Background video */}
       <video
         key={videos[current]}
         ref={videoRef}
         autoPlay
         muted
         playsInline
-        preload="auto"
+        loop
+        preload="none"
         className="absolute inset-0 w-full h-full object-cover z-0 opacity-30 pointer-events-none"
       >
-        <source src={videos[current]} type="video/mp4" />
+        <source src={videos[current]} type="video/webm" />
       </video>
 
+      {/* Name Logo */}
       <div className="absolute z-10 pointer-events-none select-none">
         <motion.div
           initial={{ opacity: 0, y: -40 }}
@@ -53,19 +59,8 @@ const Hero = () => {
         </motion.div>
       </div>
 
+      {/* Subtitle + Buttons */}
       <div className="relative z-10">
-        {/* Text content */}
-        {/* <motion.h1
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-          className="text-5xl font-bold text-cloudMist text-left"
-        >
-          <span className="font-ballet">L</span>ily
-          <br />
-          <span className="font-ballet">G</span>o
-        </motion.h1> */}
-
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -84,7 +79,7 @@ const Hero = () => {
         >
           <a
             href="#projects"
-            className="px-6 py-3 bg-pastelBlue text-cloudMist rounded-lg font-semibold hover:text-charcoalGray hover:opacity-50 transition"
+            className="px-6 py-3 bg-cloudMist text-charcoalGray rounded-lg font-semibold hover:opacity-50 transition"
           >
             View Projects
           </a>
@@ -97,7 +92,8 @@ const Hero = () => {
           </a>
         </motion.div>
       </div>
-      {/* Scroll indicator */}
+
+      {/* Scroll Indicator */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 0.8 }}

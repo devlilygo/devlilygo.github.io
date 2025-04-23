@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { skills } from "@/types/skills";
 import { motion } from "framer-motion";
 import { zoneGrid } from "@/types/zoneGrid";
+import { SmartVideo } from "../atoms/SmartVideo";
 
 export const SkillCloud = () => {
   const [durations, setDurations] = useState<number[]>([]);
@@ -17,11 +18,11 @@ export const SkillCloud = () => {
   return (
     <section
       id="skills"
-      className="relative h-screen w-full bg-[#F8FAFF] overflow-hidden text-[#3E4A5C]"
+      className="relative h-screen w-full bg-cloudMist overflow-hidden text-charcoalGray"
     >
-      <div
-        className="absolute inset-0 bg-[url('/skills-bg.jpg')] bg-cover bg-center z-0"
-        aria-hidden="true"
+      <SmartVideo
+        className="absolute inset-0 w-full h-full object-cover z-0 opacity-60"
+        src="/videos/optimized-skills-bg.webm"
       />
       <h2
         className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 

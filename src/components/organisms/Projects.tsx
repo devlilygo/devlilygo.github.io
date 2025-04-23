@@ -1,8 +1,9 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { GlowText } from "../atoms/GlowText";
+import { useSmartVideo } from "@/hooks/useSmartVideo";
 
 const projects = [
   {
@@ -31,7 +32,7 @@ const projects = [
         "\n\n",
       ],
     ],
-    video: "/telecom-bg.mp4",
+    video: "/videos/optimized-telecom-bg.webm",
   },
   {
     id: 1,
@@ -42,8 +43,10 @@ const projects = [
         <GlowText key="fd">fault detection dashboards</GlowText>,
         " and virtual metrology tools for clients like ",
         <GlowText key="hynix">SK Hynix</GlowText>,
+        ", ",
+        <GlowText key="on">SK ON</GlowText>,
         " and ",
-        <GlowText key="samsung">Samsung Electronics</GlowText>,
+        <GlowText key="samsung">Samsung</GlowText>,
         "\n\n",
       ],
       [
@@ -68,24 +71,28 @@ const projects = [
         "\n\n",
       ],
     ],
-    video: "/semiconductor-bg.mp4",
+    video: "/videos/optimized-semiconductor-bg.webm",
   },
 ];
 
 export const Projects = () => {
   const [selected, setSelected] = useState(0);
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useSmartVideo(videoRef, selected); // 👈 핵심
 
   return (
     <section className="relative h-screen w-full overflow-hidden text-white font-fira">
-      {/* 🔄 배경 영상 */}
       <video
         key={projects[selected].video}
+        ref={videoRef}
         className="absolute inset-0 w-full h-full object-cover z-0"
         src={projects[selected].video}
         autoPlay
         muted
         loop
         playsInline
+        preload="none"
       />
 
       <div className="absolute inset-0 bg-charcoalGray/90 z-0" />

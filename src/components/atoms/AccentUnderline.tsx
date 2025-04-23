@@ -30,7 +30,7 @@ export const AccentUnderline = ({
           visible: { scaleX: 1 },
         }}
         transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
-        className="absolute bottom-0 left-0 w-full h-[2px] bg-pink-400 origin-left"
+        className="absolute bottom-0 left-0 w-full h-[2px] bg-[#F4A8C4] origin-left"
       />
       <span className="relative z-10">{children}</span>
     </motion.span>

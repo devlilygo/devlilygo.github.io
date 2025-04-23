@@ -7,7 +7,7 @@ export const AboutMe = () => {
   return (
     <section
       className="relative w-full bg-cover bg-center bg-no-repeat"
-      style={{ backgroundImage: "url('/aboutme.jpg')" }}
+      style={{ backgroundImage: "url('/images/aboutme.jpg')" }}
     >
       <div className="absolute inset-0 bg-white/70 z-0" />
 
@@ -19,9 +19,9 @@ export const AboutMe = () => {
             transition={{ duration: 0.8 }}
             className="text-7xl font-bodoni mb-6 italic"
           >
-            <span className="font-ballet not-italic mr-2">A</span>bou
-            <span className="font-ballet not-italic mr-2">t</span> M
-            <span className="font-ballet not-italic mr-2">e</span>
+            <span className="font-ballet not-italic mr-2 text-8xl">A</span>bou
+            <span className="font-ballet not-italic mr-2 text-8xl">t</span> M
+            <span className="font-ballet not-italic mr-2 text-8xl">e</span>
           </motion.h2>
 
           <div className="text-xl md:text-xl italic text-gray-700 text-center max-w-7xl mx-auto leading-relaxed">

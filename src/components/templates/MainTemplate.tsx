@@ -6,6 +6,7 @@ import { ScrollDotNavigation } from "../molecules/ScrollDotNavigation";
 import { Projects } from "../organisms/Projects";
 import { SkillCloud } from "../organisms/SkillCloud";
 import { Contact } from "../organisms/Contact";
+import { ThingsIBelieve } from "../organisms/ThingsIBelieve";
 
 const MainTemplate = () => {
   return (
@@ -19,6 +20,9 @@ const MainTemplate = () => {
       </section>
       <section id="projects" className="h-screen snap-start">
         <Projects />
+      </section>
+      <section id="things" className="h-screen snap-start">
+        <ThingsIBelieve />
       </section>
       <section id="skills" className="h-screen snap-start">
         <SkillCloud />
