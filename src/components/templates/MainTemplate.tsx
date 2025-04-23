@@ -5,6 +5,7 @@ import { AboutMe } from "../organisms/AboutMe";
 import { ScrollDotNavigation } from "../molecules/ScrollDotNavigation";
 import { Projects } from "../organisms/Projects";
 import { SkillCloud } from "../organisms/SkillCloud";
+import { Contact } from "../organisms/Contact";
 
 const MainTemplate = () => {
   return (
@@ -21,6 +22,9 @@ const MainTemplate = () => {
       </section>
       <section id="skills" className="h-screen snap-start">
         <SkillCloud />
+      </section>
+      <section id="contacts" className="h-screen snap-start">
+        <Contact />
       </section>
     </div>
   );
