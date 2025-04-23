@@ -1,116 +1,53 @@
-# 🛠️ DailyXP Frontend Project Guide
+# Lily's Portfolio – Scroll-Based One Page Portfolio
 
-## ✅ Development Environment
+Welcome to my frontend portfolio built with ❤️ using:
 
-- **Framework**: Next.js 14 (App Router) (Turbopack not used)
-- **Language**: TypeScript
-- **Styling**: Tailwind CSS
-- **Component Library**: shadcn/ui
-- **Animation**: Framer Motion (if needed)
-- **Directory Structure**: Modular with `src/app`, `src/components`, `src/styles`, etc.
-- **Node.js Version**: **20.x (latest LTS)** recommended  
-  → Use `nvm` for Node version management (`nvm install 20`)
-- **UI Documentation**: Storybook (optional)  
-  → Run with `npm run storybook`  
-  → Write `*.stories.tsx` files based on `components/*` structure
+- **Next.js (App Router)**
+- **TypeScript**
+- **Tailwind CSS**
+- **Framer Motion**
+- **Atomic Design Structure**
 
----
+## 🌐 Project Structure
 
-## ✅ Commit Convention (Conventional Commits)
-
-All commits follow this format:
-
-```
-<type>: message
-```
-
-### 📌 Common Types
-
-| Type       | Description                        |
-|------------|------------------------------------|
-| `feat`     | Add new feature                    |
-| `fix`      | Fix a bug                          |
-| `refactor` | Code refactoring (no feature change) |
-| `style`    | UI style changes                   |
-| `chore`    | Setup, build, or other chores      |
-| `docs`     | Documentation updates              |
-
-**Examples**:
-
-```bash
-feat: implement creation screen
-fix: fix XP increment logic bug
-style: adjust home page padding
-```
-
----
-
-## ✅ Commit Checks (Husky + Commitlint)
-
-- `commitlint` checks commit message format
-- `prettier` auto-formats your code
-- `lint-staged` formats only staged files before commit
-
-### 📦 Command Summary
-
-```bash
-npm install       # Install dependencies
-npm run prepare   # Initialize Husky
-npm run commit    # Use commitizen for guided commits
-```
-
----
-
-## ✅ Folder Structure Example
+This project follows a modular, scalable structure with an atomic design approach:
 
 ```
 /src
-  /app
-    /page.tsx             ← Home screen
-    /layout.tsx           ← Global layout
-  /components             ← Shared UI components
-    /atoms                ← Smallest units (Button, Icon)
-    /molecules            ← Combined elements
-    /organisms            ← Complex UI
-    /templates            ← Page-level composition
-  /styles                 ← Tailwind & global styles
-  /types                  ← Type definitions
-  /constants              ← UI metadata
-  /mock                   ← Mock data for dev
-  /lib                    ← Utility functions and helpers
+  /app              → Next.js routing (App Router)
+  /components       → UI components by Atomic Design
+    /atoms          → Buttons, Typography, Icons
+    /molecules      → Cards, Section Headers
+    /organisms      → Hero, Projects, Contact sections
+    /templates      → (Optional) page-level layouts
+  /lib              → Utilities, hooks, constants
+  /styles           → Global styles, animations
+  /public           → Static files (e.g. images, background videos)
+  /types            → TypeScript declarations
 ```
 
----
+## 🛠️ Getting Started
 
-## 🔗 Example URL Structure
-
-```
-/app
-  page.tsx                ← Home (/)
+```bash
+npm install
+npm run dev
 ```
 
----
+## ✨ Features
 
-## 📦 Component Structure (Atomic Design Based)
+- Scroll-based portfolio experience
+- B-roll background video for immersive design
+- Responsive design with Tailwind
+- Modular components for reuse
+- Framer Motion animations for smooth transitions
 
-This project is structured following the Atomic Design concept:
+## 📁 To Do
 
-- `atoms`: Smallest UI units like buttons, icons
-- `molecules`: Basic component combinations like input fields, cards
-- `organisms`: Complex sections like lists, forms, dialogs
-- `templates`: Page-level layout compositions
-
----
-
-## 🧪 Testing & Lint Tools (Optional)
-
-- Includes `eslint` + `prettier` setup
-- Testing tool: Consider `vitest` or `jest` in the future
+- [ ] Complete section components (Hero, About, Projects, Contact)
+- [ ] Add real project content
+- [ ] Add SEO meta tags
+- [ ] Deploy to Vercel
 
 ---
 
-## 💡 Other Notes
-
----
-
-✨ Lily’s portfolio project — crafted with purpose, growing with every commit.
+Made with 🍵 and creativity by Lily 💙
