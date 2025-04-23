@@ -20,6 +20,7 @@ module.exports = {
         ballet: ["Ballet", "cursive"],
         bodoni: ["Bodoni Moda", "serif"],
         fira: ["Fira Mono", "monospace"],
+        bebas: ["Bebas Neue", "sans-serif"],
       },
       keyframes: {
         fadeIn: {
@@ -30,10 +31,19 @@ module.exports = {
           "0%": { width: "0%" },
           "100%": { width: "100%" },
         },
+        glow: {
+          "0%": {
+            textShadow: "0 0 0px rgba(255,255,255,0)",
+          },
+          "100%": {
+            textShadow: "0 0 8px rgba(255,255,255,0.8)",
+          },
+        },
       },
       animation: {
         "fade-in": "fadeIn 1.2s ease-out both",
         highlight: "highlight 1s ease-out forwards",
+        glow: "glow 1.5s ease-out forwards",
       },
     },
   },

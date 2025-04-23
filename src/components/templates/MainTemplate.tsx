@@ -3,6 +3,7 @@
 import Hero from "@/components/organisms/Hero";
 import { AboutMe } from "../organisms/AboutMe";
 import { ScrollDotNavigation } from "../molecules/ScrollDotNavigation";
+import { Projects } from "../organisms/Projects";
 
 const MainTemplate = () => {
   return (
@@ -13,6 +14,9 @@ const MainTemplate = () => {
       </section>
       <section id="about" className="h-screen snap-start">
         <AboutMe />
+      </section>
+      <section id="projects" className="h-screen snap-start">
+        <Projects />
       </section>
     </div>
   );
