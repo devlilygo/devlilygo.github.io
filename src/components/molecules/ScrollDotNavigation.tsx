@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 
-const SECTION_IDS = ["hero", "about", "projects", "contact"];
+const SECTION_IDS = ["hero", "about", "projects", "skills", "contact"];
 
 export const ScrollDotNavigation = () => {
   const [activeIndex, setActiveIndex] = useState(0);

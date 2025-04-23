@@ -39,11 +39,16 @@ module.exports = {
             textShadow: "0 0 8px rgba(255,255,255,0.8)",
           },
         },
+        float: {
+          "0%, 100%": { transform: "translateY(0px)" },
+          "50%": { transform: "translateY(-8px)" },
+        },
       },
       animation: {
         "fade-in": "fadeIn 1.2s ease-out both",
         highlight: "highlight 1s ease-out forwards",
         glow: "glow 1.5s ease-out forwards",
+        float: "float 4s ease-in-out infinite",
       },
     },
   },

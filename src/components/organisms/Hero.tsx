@@ -44,11 +44,11 @@ const Hero = () => {
           transition={{ duration: 1, ease: "easeOut" }}
           className="flex flex-col text-[300px] text-cloudMist font-bodoni italic"
         >
-          <section className="h-[470px] pr-60">
-            <span className="font-ballet non-italic text-[500px]">L</span>ily
+          <section className="h-[470px] pr-72">
+            <span className="font-ballet not-italic text-[500px]">L</span>ily
           </section>
-          <section className="h-[470px] pl-60">
-            <span className="font-ballet non-italic text-[500px]">G</span>o
+          <section className="h-[470px] pl-72">
+            <span className="font-ballet not-italic text-[500px]">G</span>o
           </section>
         </motion.div>
       </div>
