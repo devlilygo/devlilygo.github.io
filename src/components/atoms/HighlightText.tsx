@@ -37,7 +37,7 @@ export const HighlightText = ({
       </span>
       <span
         key={isVisible ? "active" : "inactive"}
-        className={`absolute left-0 bottom-1 h-5 ${
+        className={`absolute left-0 bottom-1 lg:h-5 h-3 ${
           isVisible ? `w-full animate-highlight` : "w-0"
         } ${bgColor} rounded-sm z-0`}
       />

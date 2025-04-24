@@ -12,19 +12,30 @@ export const AboutMe = () => {
       <div className="absolute inset-0 bg-white/70 z-0" />
 
       <section className="relative z-10 w-full h-screen px-6 md:px-16 text-gray-800 font-fira">
-        <div className="min-w-6xl mx-auto h-full flex flex-col justify-center text-center space-y-10">
+        <div className="min-w-6xl mx-auto h-full flex flex-col justify-center text-center space-y-8 lg:space-y-10">
           <motion.h2
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-7xl font-bodoni mb-6 italic"
+            className="text-7xl font-bodoni mb-6 italic hidden lg:block"
           >
             <span className="font-ballet not-italic mr-2 text-8xl">A</span>bou
             <span className="font-ballet not-italic mr-2 text-8xl">t</span> M
             <span className="font-ballet not-italic mr-2 text-8xl">e</span>
           </motion.h2>
 
-          <div className="text-xl md:text-xl italic text-gray-700 text-center max-w-7xl mx-auto leading-relaxed">
+          <motion.h2
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-4xl font-bodoni mb-6 italic block lg:hidden"
+          >
+            <span className="font-ballet not-italic mr-2 text-6xl">A</span>bou
+            <span className="font-ballet not-italic mr-2 text-6xl">t</span> M
+            <span className="font-ballet not-italic mr-2 text-6xl">e</span>
+          </motion.h2>
+
+          <div className="text-xs lg:text-xl italic text-gray-700 text-center max-w-7xl mx-auto leading-relaxed">
             &quot;I&#39;m a frontend developer with 8+ years of experience,
             specializing in&nbsp;
             <HighlightText color="yellow">scalable</HighlightText>,&nbsp;
@@ -59,7 +70,7 @@ export const AboutMe = () => {
           </div>
 
           <div className="pt-8 flex flex-col md:flex-row gap-6 justify-center items-center">
-            <div className="text-left max-w-6xl space-y-4 text-base">
+            <div className="text-left max-w-6xl space-y-4 lg:text-base hidden lg:block">
               <p>
                 🧠 <strong>Strengths:</strong> Empathy, team collaboration,
                 UI-first thinking
@@ -74,6 +85,29 @@ export const AboutMe = () => {
               <p>
                 🎯 <strong>Mission:</strong> Designing experiences that feel as
                 good as they function
+              </p>
+            </div>
+
+            <div className="text-center max-w-6xl space-y-4 text-xs block lg:hidden">
+              <p>
+                🧠 <strong>Strengths</strong>
+                <br />
+                Empathy, team collaboration, UI-first thinking
+              </p>
+              <p>
+                💼 <strong>Career</strong>
+                <br />4 years backend → 4 years frontend
+              </p>
+              <p>
+                🌍 <strong>Location</strong>
+                <br />
+                Based in Toronto, open to hybrid/remote roles
+              </p>
+              <p>
+                🎯 <strong>Mission</strong>
+                <br />
+                Designing experiences <br />
+                that feel as good as they function
               </p>
             </div>
           </div>
