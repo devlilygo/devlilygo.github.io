@@ -36,7 +36,7 @@ const projects = [
   },
   {
     id: 1,
-    title: "Data-Driven Manufacturing Dashboard Engineering",
+    title: "Data-Driven Manufacturing Dashboard",
     description: [
       [
         "🧪 Built ",
@@ -102,7 +102,7 @@ export const Projects = () => {
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-4xl mb-6 drop-shadow-lg font-bebas italic"
+          className="text-2xl lg:text-4xl mb-6 drop-shadow-lg font-bebas italic"
         >
           {projects[selected].title}
         </motion.h2>
@@ -112,7 +112,7 @@ export const Projects = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-xl whitespace-pre-line leading-relaxed mb-8 drop-shadow gap-y-3"
+          className="text-base p-3 lg:text-xl whitespace-pre-line leading-relaxed mb-8 drop-shadow gap-y-3"
         >
           {projects[selected].description}
         </motion.p>

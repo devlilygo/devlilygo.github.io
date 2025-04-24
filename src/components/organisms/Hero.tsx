@@ -48,13 +48,19 @@ const Hero = () => {
           initial={{ opacity: 0, y: -40 }}
           animate={{ opacity: 0.3, y: 0 }}
           transition={{ duration: 1, ease: "easeOut" }}
-          className="flex flex-col text-[300px] text-cloudMist font-bodoni italic"
+          className="flex flex-col text-[100px] lg:text-[300px] text-cloudMist font-bodoni italic"
         >
-          <section className="h-[470px] pr-72">
-            <span className="font-ballet not-italic text-[500px]">L</span>ily
+          <section className="h-[70px] pr-12 lg:h-[470px] lg:pr-72">
+            <span className="font-ballet not-italic text-[50px] lg:text-[500px]">
+              L
+            </span>
+            ily
           </section>
-          <section className="h-[470px] pl-72">
-            <span className="font-ballet not-italic text-[500px]">G</span>o
+          <section className="h-[70px] pl-12 lg:h-[470px] lg:pl-72">
+            <span className="font-ballet not-italic text-[50px] lg:text-[500px]">
+              G
+            </span>
+            o
           </section>
         </motion.div>
       </div>
@@ -65,10 +71,23 @@ const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3, duration: 1 }}
-          className="mt-4 text-xl text-cloudMist"
+          className="mt-4 text-xl text-cloudMist hidden lg:block"
         >
           Frontend Developer | Empathetic & Team-spirited | React, TypeScript |
           8y+
+        </motion.p>
+
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.3, duration: 1 }}
+          className="mt-4 text-xl text-cloudMist block lg:hidden"
+        >
+          Frontend Developer
+          <br />
+          Empathetic & Team-spirited
+          <br />
+          React, TypeScript | 8y+
         </motion.p>
 
         <motion.div

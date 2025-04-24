@@ -17,11 +17,12 @@ export const Contact = () => {
       <div className="absolute inset-0 bg-charcoalGray/80 z-10 pointer-events-none" />
 
       <div className="relative z-20 flex flex-col justify-center items-center text-center">
-        <h2 className="text-8xl font-bodoni mb-10 italic">
-          <span className="font-ballet not-italic text-9xl">C</span>ontact
+        <h2 className="text-6xl lg:text-8xl font-bodoni mb-10 italic">
+          <span className="font-ballet not-italic text-7xl lg:text-9xl">C</span>
+          ontact
         </h2>
 
-        <p className="text-lg max-w-xl mb-10">
+        <p className="text-sm lg:text-lg max-w-xl mb-10 p-3">
           Feel free to reach out if you&apos;re interested in working together
           or just want to say hi 👋
         </p>
