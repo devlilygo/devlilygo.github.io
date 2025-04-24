@@ -8,7 +8,7 @@ const SECTION_IDS = [
   "projects",
   "things",
   "skills",
-  "contact",
+  "contacts",
 ];
 
 export const ScrollDotNavigation = () => {
