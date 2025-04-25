@@ -1,10 +1,70 @@
 "use client";
 
-import { useRef, useState } from "react";
-import { motion } from "framer-motion";
-import { GlowText } from "../atoms/GlowText";
 import { useSmartVideo } from "@/hooks/useSmartVideo";
+import classNames from "classnames";
+import { motion } from "framer-motion";
+import { useRef, useState } from "react";
+import { GlowText } from "../atoms/GlowText";
 
+// styles
+const style = {
+  container: classNames(
+    "relative",
+    "h-screen",
+    "w-full",
+    "overflow-hidden",
+    "text-white",
+    "font-fira"
+  ),
+  videoArea: classNames(
+    "absolute",
+    "inset-0",
+    "w-full",
+    "h-full",
+    "object-cover",
+    "z-0"
+  ),
+  backgroundArea: classNames(
+    "absolute",
+    "inset-0",
+    "bg-charcoalGray/90",
+    "z-0"
+  ),
+  mainContainer: classNames(
+    "relative",
+    "z-10",
+    "flex",
+    "flex-col",
+    "justify-center",
+    "items-center",
+    "h-full",
+    "px-6",
+    "text-center",
+    "min-w-3xl",
+    "mx-auto",
+    "gap-y-12"
+  ),
+  titleArea: classNames(
+    "text-2xl",
+    "lg:text-4xl",
+    "mb-6",
+    "drop-shadow-lg",
+    "font-bebas",
+    "italic"
+  ),
+  descriptionArea: classNames(
+    "text-base",
+    "p-3",
+    "lg:text-xl",
+    "whitespace-pre-line",
+    "leading-relaxed",
+    "mb-8",
+    "drop-shadow",
+    "gap-y-3"
+  ),
+};
+
+//NOTE - projects
 const projects = [
   {
     id: 0,
@@ -79,14 +139,15 @@ export const Projects = () => {
   const [selected, setSelected] = useState(0);
   const videoRef = useRef<HTMLVideoElement>(null);
 
-  useSmartVideo(videoRef, selected); // 👈 핵심
+  //NOTE - Video Switching Hook
+  useSmartVideo(videoRef, selected);
 
   return (
-    <section className="relative h-screen w-full overflow-hidden text-white font-fira">
+    <section className={style.container}>
       <video
         key={projects[selected].video}
         ref={videoRef}
-        className="absolute inset-0 w-full h-full object-cover z-0"
+        className={style.videoArea}
         src={projects[selected].video}
         autoPlay
         muted
@@ -95,14 +156,14 @@ export const Projects = () => {
         preload="none"
       />
 
-      <div className="absolute inset-0 bg-charcoalGray/90 z-0" />
-      {/* 📄 내용 */}
-      <div className="relative z-10 flex flex-col justify-center items-center h-full px-6 text-center min-w-3xl mx-auto gap-y-12">
+      <div className={style.backgroundArea} />
+
+      <div className={style.mainContainer}>
         <motion.h2
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-2xl lg:text-4xl mb-6 drop-shadow-lg font-bebas italic"
+          className={style.titleArea}
         >
           {projects[selected].title}
         </motion.h2>
@@ -112,7 +173,7 @@ export const Projects = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-base p-3 lg:text-xl whitespace-pre-line leading-relaxed mb-8 drop-shadow gap-y-3"
+          className={style.descriptionArea}
         >
           {projects[selected].description}
         </motion.p>
