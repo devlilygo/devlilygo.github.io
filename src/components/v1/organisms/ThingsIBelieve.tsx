@@ -1,6 +1,6 @@
 "use client";
 
-import { AccentUnderline } from "@/components/atoms/AccentUnderline";
+import { AccentUnderline } from "@/components/v1/atoms/AccentUnderline";
 import classNames from "classnames";
 
 // styles

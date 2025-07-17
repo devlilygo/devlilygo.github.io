@@ -1,6 +1,6 @@
 "use client";
 
-import Hero from "@/components/organisms/Hero";
+import Hero from "@/components/v1/organisms/Hero";
 import { AboutMe } from "../organisms/AboutMe";
 import { ScrollDotNavigation } from "../molecules/ScrollDotNavigation";
 import { Projects } from "../organisms/Projects";

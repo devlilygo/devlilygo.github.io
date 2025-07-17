@@ -1,4 +1,4 @@
-import MainTemplate from "@/components/v2/templates/MainTemplate";
+import MainTemplate from "@/components/v1/templates/MainTemplate";
 
 export default function Home() {
   return (
