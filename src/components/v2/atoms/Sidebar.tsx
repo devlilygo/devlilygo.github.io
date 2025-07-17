@@ -11,6 +11,7 @@ import {
   TreePalm,
 } from "lucide-react";
 import classNames from "classnames";
+import WaveText from "./WaveText";
 
 const tabs = [
   { label: "Overview", icon: <Home size={20} />, href: "/" },
@@ -39,9 +40,13 @@ export default function Sidebar() {
             color="black"
             amplitude={4}
           /> */}
-          <h1 className="text-3xl text-black ml-2 font-jost font-medium text-center">
-            Lily Go
-          </h1>
+          {/* <h1 className="text-3xl text-black ml-2 font-jost font-medium text-center"> */}
+          <WaveText
+            text="Lily Go"
+            amplitude={4}
+            className="text-3xl ml-2 font-jost font-medium text-center"
+          />
+          {/* </h1> */}
         </div>
         <nav className="flex flex-col gap-2 text-gray-400">
           {tabs.map((tab) => (

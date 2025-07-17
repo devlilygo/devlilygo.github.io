@@ -15,7 +15,7 @@ interface WaveTextProps {
 export default function WaveText({
   text,
   className = "text-4xl font-bold",
-  color = "#78A2D2",
+  color = "black",
   amplitude = 8,
   duration = 2,
   delayStep = 0.1,
