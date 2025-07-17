@@ -1,6 +1,5 @@
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { allProjects } from "@/data/recentProjects";
-import { useEffect, useRef, useState } from "react";
 import { ChevronDown } from "lucide-react";
 
 const ProjectsTimeline = () => {

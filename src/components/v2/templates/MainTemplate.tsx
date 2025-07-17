@@ -47,7 +47,9 @@ export default function MainTemplate() {
                   <span className="text-5xl font-extralight mt-6">
                     Overview
                   </span>
-                  <span className="text-lg font-medium">Hi, I'm Lily!</span>
+                  <span className="text-lg font-medium">
+                    Hi, I&apos;m Lily!
+                  </span>
                 </div>
               </header>
 
