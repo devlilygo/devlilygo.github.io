@@ -1,7 +1,5 @@
 "use client";
 
-import Link from "next/link";
-import { usePathname } from "next/navigation";
 import {
   Home,
   GitPullRequestArrow,
@@ -25,42 +23,36 @@ const tabs = [
   { label: "Contacts", icon: <Send size={20} />, href: "/contacts" },
 ];
 
-export default function Sidebar() {
-  const pathname = usePathname();
+interface SidebarProps {
+  currTab: string;
+  setTab: (tab: string) => void;
+}
 
+export default function Sidebar({ currTab, setTab }: SidebarProps) {
   return (
     <aside className="flex h-screen w-64 bg-white/60 border-r-[0.3px] border-gray-300 p-4 flex-col justify-between">
       <div>
         <div className="flex h-[100px] items-center justify-center">
           <TreePalm size={40} color="#78A2D2" />
-
-          {/* <WaveText
-            text="Lily Go"
-            className="text-3xl ml-2 font-jost font-medium text-center"
-            color="black"
-            amplitude={4}
-          /> */}
-          {/* <h1 className="text-3xl text-black ml-2 font-jost font-medium text-center"> */}
           <WaveText
             text="Lily Go"
             amplitude={4}
             className="text-3xl ml-2 font-jost font-medium text-center"
           />
-          {/* </h1> */}
         </div>
         <nav className="flex flex-col gap-2 text-gray-400">
           {tabs.map((tab) => (
-            <Link
+            <div
               key={tab.label}
-              href={tab.href}
               className={classNames(
-                "flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-white/60 transition ",
-                pathname === tab.href && "bg-white/60 text-black"
+                "flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-white/60 transition cursor-pointer",
+                currTab === tab.label && "bg-white/60 text-black"
               )}
+              onClick={() => setTab(tab.label)}
             >
               {tab.icon}
               <span>{tab.label}</span>
-            </Link>
+            </div>
           ))}
         </nav>
       </div>
