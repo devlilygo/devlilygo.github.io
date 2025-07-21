@@ -3,8 +3,8 @@ import "./globals.css";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Lily Init",
-  description: "Frontend Engineer | 감성 포트폴리오",
+  title: "Lily Go | Frontend Developer",
+  description: "Frontend Developer",
 };
 
 export default function RootLayout({
