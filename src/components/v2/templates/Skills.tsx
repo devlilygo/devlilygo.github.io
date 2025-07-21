@@ -282,7 +282,7 @@ const Skills = () => {
             options={timelineOptions}
             series={timelineState}
             type="rangeBar"
-            height={300}
+            height={350}
           />
         </Card>
       </div>

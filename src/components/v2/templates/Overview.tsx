@@ -5,10 +5,17 @@ import { Card } from "../atoms/Card";
 import ProjectsTimeline from "../molecules/ProjectsTimeline";
 import { toast } from "sonner";
 import { Calendar } from "@/components/ui/calendar";
-
+import { Bell } from "lucide-react";
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover";
+import { Button } from "@/components/ui/button";
 const Overview = () => {
   const [copied, setCopied] = useState(false);
   const [date, setDate] = useState<Date | undefined>(new Date());
+  // const [hasUnread, setRead] = useState(true);
 
   const handleCopy = async () => {
     try {
@@ -27,6 +34,34 @@ const Overview = () => {
         <div className="flex flex-col items-start">
           <span className="text-5xl font-extralight mt-6 mb-3">Overview</span>
           <span className="text-lg font-medium">Hi, I&apos;m Lily!</span>
+        </div>
+        <div className="mr-2">
+          <Popover>
+            <PopoverTrigger>
+              <Button
+                variant="outline"
+                className="relative rounded-2xl h-12"
+                // onClick={() => setRead(false)}
+              >
+                <Bell size={40} />
+                {/* {hasUnread && ( */}
+                <span className="absolute top-1 right-1 block w-2.5 h-2.5 bg-red-500 rounded-full animate-ping" />
+                {/* )} */}
+                {/* {hasUnread && ( */}
+                <span className="absolute top-1 right-1 block w-2.5 h-2.5 bg-red-500 rounded-full" />
+                {/* )} */}
+              </Button>
+            </PopoverTrigger>
+            <PopoverContent className="w-56">
+              <p className="font-medium text-black whitespace-pre-line">
+                {`Available for hire 
+                — React, Next.js & more`}
+              </p>
+              <p className="text-muted-foreground mt-1">
+                {`Don’t wait, get in touch ⚡️`}
+              </p>
+            </PopoverContent>
+          </Popover>
         </div>
       </header>
 
@@ -58,7 +93,7 @@ const Overview = () => {
         </div>
         <div className="flex flex-col h-full w-1/3 gap-10">
           <div className="flex h-1/2 w-full">
-            <Card className="border-none bg-white/70" title="DOWNLOAD">
+            <Card className="border-none bg-white/70 h-72" title="DOWNLOAD">
               <div className="flex flex-col gap-3 items-center justify-center">
                 <div className="flex gap-2">
                   <a
@@ -104,10 +139,10 @@ const Overview = () => {
               </div>
             </Card>
           </div>
-          <div className="flex h-1/2 w-full">
+          <div className="flex h-full w-full">
             <Card
               title="ID CARD"
-              className="border-none w-full h-full flex items-center justify-center"
+              className="border-none w-full h-[23rem] flex items-center justify-center"
               header={false}
               backgroundColor="bg-white/60"
               padding="p-0"
