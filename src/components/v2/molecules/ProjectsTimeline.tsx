@@ -50,7 +50,7 @@ const ProjectsTimeline = () => {
         ))}
       </ScrollArea>
       {/* {showArrow && ( */}
-      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 animate-bounce text-gray-400 pointer-events-none">
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 animate-bounce text-gray-400 pointer-events-none">
         <ChevronDown className="w-5 h-5" />
       </div>
       {/* )} */}

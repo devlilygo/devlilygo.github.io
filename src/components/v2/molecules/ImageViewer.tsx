@@ -27,20 +27,20 @@ export function ImageViewer({
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
     >
-      <motion.div className="h-auto w-[90%] cursor-pointer m-5">
+      <motion.div className="h-full w-auto cursor-pointer">
         <Image
           src={src}
           alt=""
-          width={1200}
-          height={700}
-          className="w-[1200px] h-[700px] object-cover rounded-2xl shadow-2xl"
+          width={1920}
+          height={1080}
+          className="h-full w-auto object-cover rounded-2xl shadow-2xl"
         />
         {/* 설명 영역 */}
         <motion.div
           initial={{ opacity: 0, x: 40 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.1, duration: 0.8, ease: "easeOut" }}
-          className="absolute h-full w-[70%] top-0 right-0 bottom-4 bg-white/50 backdrop-blur-xl text-black px-4 py-3 rounded-lg items-center justify-center flex"
+          className="absolute h-full w-[70%] top-0 right-0 bottom-4 bg-white/30 backdrop-blur-xl text-black px-4 py-3 rounded-lg items-center justify-center flex"
         >
           <TechStack data={description} />
         </motion.div>

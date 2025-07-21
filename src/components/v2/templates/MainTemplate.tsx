@@ -26,7 +26,7 @@ export default function MainTemplate() {
         <div className="fixed inset-0 bg-[url('/images/bg2.jpg')] bg-cover bg-center" />
 
         {!showIntro && (
-          <div className="w-[1200px] h-[90vh] rounded-2xl backdrop-blur-md overflow-hidden flex animate-fade-in">
+          <div className="w-[1200px] h-[900px] rounded-2xl backdrop-blur-md overflow-hidden flex animate-fade-in">
             <Sidebar currTab={tab} setTab={setTab} />
             {tab === "Overview" && <Overview />}
             {tab === "Skills" && <Skills />}
