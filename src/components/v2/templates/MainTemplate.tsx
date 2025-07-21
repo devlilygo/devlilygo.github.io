@@ -10,9 +10,9 @@ import Works from "./Works";
 import Strength from "./Strength";
 // import Contacts from "./Contacts";
 export default function MainTemplate() {
-  const [showIntro, setShowIntro] = useState(false);
+  const [showIntro, setShowIntro] = useState(true);
 
-  const [tab, setTab] = useState("Skills");
+  const [tab, setTab] = useState("Overview");
 
   useEffect(() => {
     const timer = setTimeout(() => setShowIntro(false), 2000); // 타이머 조절 가능
