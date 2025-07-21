@@ -1,5 +1,8 @@
+"use client";
+
 import classNames from "classnames";
 import { ReactNode } from "react";
+import { motion } from "framer-motion";
 
 interface props {
   href?: string;
@@ -22,7 +25,10 @@ export const Card = ({
 }: props) => {
   return (
     // <Link href={href} className="flex h-full w-full">
-    <div
+    <motion.div
+      transition={{ type: "spring", duration: 0.7, velocity: 1 }}
+      initial={{ scale: 0.9, filter: "blur(5px)" }}
+      animate={{ scale: 1.0, filter: "blur(0px)" }}
       className={classNames(
         "flex flex-col h-full w-full items-center justify-center shadow-none border-0 rounded-2xl",
         padding,
@@ -38,7 +44,7 @@ export const Card = ({
         <></>
       )}
       <div className="flex-1 w-full h-full">{children}</div>
-    </div>
+    </motion.div>
     // </Link>
   );
 };

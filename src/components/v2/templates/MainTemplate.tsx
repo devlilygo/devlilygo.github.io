@@ -6,6 +6,9 @@ import { AnimatePresence } from "framer-motion";
 import OpeningAction from "../atoms/OpeningAction";
 import Overview from "./Overview";
 import Skills from "./Skills";
+import Works from "./Works";
+import Strength from "./Strength";
+// import Contacts from "./Contacts";
 export default function MainTemplate() {
   const [showIntro, setShowIntro] = useState(false);
 
@@ -27,7 +30,9 @@ export default function MainTemplate() {
             <Sidebar currTab={tab} setTab={setTab} />
             {tab === "Overview" && <Overview />}
             {tab === "Skills" && <Skills />}
-            {/* {tab === "works" && <Works />} */}
+            {tab === "Works" && <Works />}
+            {tab === "Strength" && <Strength />}
+            {/* {tab === "Contacts" && <Contacts />} */}
           </div>
         )}
       </div>

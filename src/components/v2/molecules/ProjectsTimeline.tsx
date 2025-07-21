@@ -1,3 +1,5 @@
+"use client";
+
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { allProjects } from "@/data/recentProjects";
 import { ChevronDown } from "lucide-react";

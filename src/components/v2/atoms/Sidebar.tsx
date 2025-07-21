@@ -4,12 +4,11 @@ import {
   Home,
   GitPullRequestArrow,
   BarChart,
-  Send,
-  Sparkles,
+  // Sparkles,
   TreePalm,
 } from "lucide-react";
 import classNames from "classnames";
-import WaveText from "./WaveText";
+// import WaveText from "./WaveText";
 
 const tabs = [
   { label: "Overview", icon: <Home size={20} />, href: "/" },
@@ -19,8 +18,8 @@ const tabs = [
     icon: <BarChart size={20} />,
     href: "/works",
   },
-  { label: "Strength", icon: <Sparkles size={20} />, href: "/strength" },
-  { label: "Contacts", icon: <Send size={20} />, href: "/contacts" },
+  // { label: "Strength", icon: <Sparkles size={20} />, href: "/strength" },
+  // { label: "Contacts", icon: <Send size={20} />, href: "/contacts" },
 ];
 
 interface SidebarProps {
@@ -34,11 +33,14 @@ export default function Sidebar({ currTab, setTab }: SidebarProps) {
       <div>
         <div className="flex h-[100px] items-center justify-center">
           <TreePalm size={40} color="#78A2D2" />
-          <WaveText
+          {/* <WaveText
             text="Lily Go"
             amplitude={4}
             className="text-3xl ml-2 font-jost font-medium text-center"
-          />
+          /> */}
+          <span className="text-3xl ml-2 font-jost font-medium text-center">
+            Lily Go
+          </span>
         </div>
         <nav className="flex flex-col gap-2 text-gray-400">
           {tabs.map((tab) => (
