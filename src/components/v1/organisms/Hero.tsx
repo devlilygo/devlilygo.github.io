@@ -220,7 +220,7 @@ const Hero = () => {
             View Projects
           </a>
           <a
-            href="/resume_lilygo_202504.pdf"
+            href="/resume_lilygo_202507.pdf"
             target="_blank"
             className={style.resumeButton}
           >
