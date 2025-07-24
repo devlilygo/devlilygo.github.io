@@ -1,21 +1,22 @@
 "use client";
 
-import { useState } from "react";
-import { Card } from "../atoms/Card";
-import ProjectsTimeline from "../molecules/ProjectsTimeline";
-import { toast } from "sonner";
 import { Calendar } from "@/components/ui/calendar";
-import { Bell } from "lucide-react";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
-import { Button } from "@/components/ui/button";
+import { Bell, FlaskConical } from "lucide-react";
+import { useState } from "react";
+import { toast } from "sonner";
+import { Card } from "../atoms/Card";
+import ProjectsTimeline from "../molecules/ProjectsTimeline";
+import { useRouter } from "next/navigation";
+
 const Overview = () => {
   const [copied, setCopied] = useState(false);
   const [date, setDate] = useState<Date | undefined>(new Date());
-  // const [hasUnread, setRead] = useState(true);
+  const router = useRouter();
 
   const handleCopy = async () => {
     try {
@@ -35,22 +36,27 @@ const Overview = () => {
           <span className="text-5xl font-extralight mt-6 mb-3">Overview</span>
           <span className="text-lg font-medium">Hi, I&apos;m Lily!</span>
         </div>
-        <div className="mr-2">
+        <div className="mr-2 flex gap-6 items-center">
+          <button
+            className="relative rounded-2xl h-12 w-28 overflow-hidden shadow-md group"
+            onClick={() => router.push("/lab")}
+          >
+            <div className="absolute inset-0 bg-white transition-opacity duration-300 group-hover:opacity-0" />
+            <div className="absolute inset-0 bg-gradient-to-br from-sky-200 to-yellow-100 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            <div className="relative z-10 h-full w-full flex items-center justify-center gap-1">
+              <FlaskConical size={20} />
+              <span className="font-normal text-black group-hover:text-black">
+                Lily&apos;s Lab
+              </span>
+            </div>
+          </button>
           <Popover>
             <PopoverTrigger>
-              <Button
-                variant="outline"
-                className="relative rounded-2xl h-12"
-                // onClick={() => setRead(false)}
-              >
-                <Bell size={40} />
-                {/* {hasUnread && ( */}
+              <div className="relative rounded-2xl h-12 w-12 bg-white flex items-center justify-center shadow-md hover:bg-gray-100 transition">
+                <Bell size={20} />
                 <span className="absolute top-1 right-1 block w-2.5 h-2.5 bg-red-500 rounded-full animate-ping" />
-                {/* )} */}
-                {/* {hasUnread && ( */}
                 <span className="absolute top-1 right-1 block w-2.5 h-2.5 bg-red-500 rounded-full" />
-                {/* )} */}
-              </Button>
+              </div>
             </PopoverTrigger>
             <PopoverContent className="w-56">
               <p className="font-medium text-black whitespace-pre-line">
