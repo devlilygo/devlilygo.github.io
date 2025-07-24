@@ -11,7 +11,7 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
-import { Button } from "@/components/ui/button";
+// import { Button } from "@/components/ui/button";
 const Overview = () => {
   const [copied, setCopied] = useState(false);
   const [date, setDate] = useState<Date | undefined>(new Date());
@@ -38,19 +38,21 @@ const Overview = () => {
         <div className="mr-2">
           <Popover>
             <PopoverTrigger>
-              <Button
+              {/* <Button
                 variant="outline"
                 className="relative rounded-2xl h-12"
                 // onClick={() => setRead(false)}
-              >
-                <Bell size={40} />
+              > */}
+              <div className="relative rounded-2xl h-12 w-12 bg-white flex items-center justify-center shadow-md hover:bg-gray-100 transition">
+                <Bell size={20} />
                 {/* {hasUnread && ( */}
                 <span className="absolute top-1 right-1 block w-2.5 h-2.5 bg-red-500 rounded-full animate-ping" />
                 {/* )} */}
                 {/* {hasUnread && ( */}
                 <span className="absolute top-1 right-1 block w-2.5 h-2.5 bg-red-500 rounded-full" />
                 {/* )} */}
-              </Button>
+              </div>
+              {/* </Button> */}
             </PopoverTrigger>
             <PopoverContent className="w-56">
               <p className="font-medium text-black whitespace-pre-line">
