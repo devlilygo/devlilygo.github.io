@@ -1,0 +1,18 @@
+name: "Bug Report 🐛"
+description: "앱에서 발생한 문제를 제보해주세요"
+title: "[Bug] "
+labels: [bug]
+body:
+  - type: textarea
+    id: bug
+    attributes:
+      label: "🐞 어떤 버그인가요?"
+      placeholder: "예: 퀘스트 완료 버튼을 눌러도 XP가 증가하지 않아요."
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: "🔁 재현 방법"
+      placeholder: "어떤 상황에서 발생했는지 적어주세요"
