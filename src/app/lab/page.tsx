@@ -37,7 +37,9 @@ const style = {
     "overflow-y-auto",
     "snap-y snap-mandatory"
   ),
-  sideNav: classNames("sticky top-1/2 -translate-y-1/2 z-50 space-y-4 ml-4"),
+  sideNav: classNames(
+    "sticky top-1/2 -translate-y-1/2 z-50 space-y-4 ml-4 w-max"
+  ),
   viewCodeContainer: classNames(
     "flex",
     "w-full",
