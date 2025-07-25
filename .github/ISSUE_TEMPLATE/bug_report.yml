@@ -1,18 +1,44 @@
 name: "Bug Report 🐛"
-description: "앱에서 발생한 문제를 제보해주세요"
+description: "Report issues or unexpected behavior found in the app."
 title: "[Bug] "
 labels: [bug]
 body:
   - type: textarea
     id: bug
     attributes:
-      label: "🐞 어떤 버그인가요?"
-      placeholder: "예: 퀘스트 완료 버튼을 눌러도 XP가 증가하지 않아요."
+      label: "🐞 What is the bug?"
+      placeholder: "e.g., Clicking the submit button does not trigger any action."
     validations:
       required: true
 
   - type: textarea
     id: steps
     attributes:
-      label: "🔁 재현 방법"
-      placeholder: "어떤 상황에서 발생했는지 적어주세요"
+      label: "🔁 Steps to reproduce"
+      placeholder: "Please describe the steps to reproduce the issue."
+    validations:
+      required: false
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: "✅ Expected behavior (optional)"
+      placeholder: "e.g., The form should be submitted and a success message should appear."
+    validations:
+      required: false
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: "🧪 Environment (optional)"
+      placeholder: "e.g., Chrome 114, iOS 17.1, Desktop App v2.3.1"
+    validations:
+      required: false
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: "📝 Additional notes (optional)"
+      placeholder: "Any screenshots, logs, or context that might help"
+    validations:
+      required: false

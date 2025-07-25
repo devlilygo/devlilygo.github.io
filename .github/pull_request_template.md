@@ -1,25 +1,25 @@
-# 📌 개요
+# 📌 Overview
 
-- 어떤 작업을 했는지 요약해주세요.
+- Brief summary of what was done.
 
-# ✅ 작업 내용
+# ✅ Tasks
 
-- [ ] 기능 추가 / 수정 / 삭제
-- [ ] 스타일 변경
-- [ ] 버그 수정
-- [ ] 리팩토링
-- [ ] 기타 작업
+- [ ] Feature added / modified / removed
+- [ ] Style changes
+- [ ] Bug fixes
+- [ ] Refactoring
+- [ ] Other tasks
 
-# 📎 관련 이슈
+# 📎 Related Issues
 
-Closes #이슈번호 (선택)
+Closes #issue-number (optional)
 
-# 🔍 확인 사항
+# 🔍 Checklist
 
-- [ ] 정상 동작 확인
-- [ ] lint / build 통과 확인
-- [ ] 커밋 메시지 규칙 확인 (feat, fix 등)
+- [ ] Confirmed normal operation
+- [ ] Passed lint / build checks
+- [ ] Commit message follows conventions (e.g., feat, fix)
 
-# 🗒️ 기타 참고 사항
+# 🗒️ Notes
 
-- 디자이너 / 백엔드 / 본인 메모 등
+- For designer / backend / personal notes, etc.

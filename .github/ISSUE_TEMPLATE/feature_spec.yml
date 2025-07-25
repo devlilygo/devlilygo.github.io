@@ -1,39 +1,40 @@
 name: "Feature Spec 📦"
-description: "구현할 기능을 정의하고, 작업 전 사전 정리를 위해 작성해주세요"
+description: "Define the feature to be implemented and outline the plan before starting development."
 title: "[feat] "
 labels: [feat]
 body:
   - type: textarea
     id: summary
     attributes:
-      label: "📌 어떤 기능인가요?"
-      placeholder: "예: 보상 선택 화면 UI 및 보상 해금 로직"
+      label: "📌 What is the feature?"
+      placeholder: "e.g., New user profile UI and edit functionality"
     validations:
       required: true
 
   - type: textarea
     id: flow
     attributes:
-      label: "🔁 예상 유저 플로우(선택)"
-      placeholder: "예: 홈 > XP 도달 > 보상 버튼 클릭 > 보상 선택 화면"
+      label: "🔁 Expected user flow (optional)"
+      placeholder: "e.g., Dashboard > Click 'Edit Profile' > Modify fields > Save changes"
     validations:
       required: false
 
   - type: textarea
     id: data
     attributes:
-      label: "🧩 필요한 데이터 or 상태(선택)"
-      placeholder: "XP 값, 보상 리스트, unlock 조건 등"
+      label: "🧩 Required data or state (optional)"
+      placeholder: "e.g., User info object, editable fields, validation rules"
     validations:
       required: false
 
   - type: textarea
     id: checklist
     attributes:
-      label: "✅ 구현할 세부 작업 (체크리스트)"
+      label: "✅ Tasks to implement (checklist)"
       placeholder: |
-        - [ ] UI 구성
-        - [ ] 보상 unlock 조건 연결
-        - [ ] 클릭 시 애니메이션
+        - [ ] Build UI components
+        - [ ] Connect to API
+        - [ ] Add input validation
+        - [ ] Handle error states
     validations:
       required: false
