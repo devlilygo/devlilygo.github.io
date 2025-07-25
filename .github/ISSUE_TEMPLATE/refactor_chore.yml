@@ -1,31 +1,31 @@
 name: "Refactor / Chore 🛠️"
-description: "코드 정리, 설정 변경 등 기능 외 작업을 정리해주세요"
+description: "Summarize non-feature tasks such as code cleanup, config updates, etc."
 title: "[Chore] "
 labels: [chore]
 body:
   - type: textarea
     id: task
     attributes:
-      label: "🧹 어떤 작업인가요?"
-      placeholder: "예: 컴포넌트 폴더 구조 정리, ESLint 설정 업데이트 등"
+      label: "🧹 What kind of task is this?"
+      placeholder: "e.g., Refactored component folder structure, updated ESLint config, etc."
     validations:
       required: true
 
   - type: textarea
     id: reason
     attributes:
-      label: "🔍 작업 이유 or 배경"
-      placeholder: "예: Atomic 구조 재정비를 위해, 불필요한 의존성 제거 등"
+      label: "🔍 Reason or Background"
+      placeholder: "e.g., To reorganize the atomic structure, removed unused dependencies, etc."
     validations:
       required: false
 
   - type: textarea
     id: checklist
     attributes:
-      label: "✅ 작업 항목"
+      label: "✅ Task Items"
       placeholder: |
-        - [ ] 불필요한 폴더 제거
-        - [ ] eslint 설정 업데이트
-        - [ ] tsconfig 경로 재설정
+        - [ ] Removed unnecessary folders
+        - [ ] Updated ESLint config
+        - [ ] Reconfigured tsconfig paths
     validations:
       required: false
