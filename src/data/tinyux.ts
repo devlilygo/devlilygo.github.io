@@ -2,20 +2,11 @@ import RememberLastLogin from "@/components/lab/01-remember-last-login/RememberL
 
 export const tinyuxList = [
   {
-    id: "ux01",
+    id: "01-remember-last-login",
     title: "#01 — Remember Last Login",
     description: "Automatically shows the login method you used last time",
     Component: RememberLastLogin,
-    codeUrl: "",
-    //   "https://github.com/lily/tinyux/blob/main/components/lab/01/LoginDemo.tsx",
+    codeUrl:
+      "https://github.com/devlilygo/devlilygo.github.io/tree/main/src/components/lab/01-remember-last-login",
   },
-  //   {
-  //     id: "ux02",
-  //     title: "#02 — Auto Focus Input Field",
-  //     description:
-  //       "Automatically focuses the first input field when a form or modal appears",
-  //     Component: <div>d</div>,
-  //     codeUrl: "",
-  //     //   "https://github.com/lily/tinyux/blob/main/components/lab/01/LoginDemo.tsx",
-  //   },
 ];
