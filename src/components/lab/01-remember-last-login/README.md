@@ -33,7 +33,6 @@ localStorage.setItem("lastLoginProvider", "google");
 ## 🖼️ Screenshot
 
 ![Preview](./screenshot.png)  
-_Optional caption: Example login screen showing last used provider_
 
 ---
 
