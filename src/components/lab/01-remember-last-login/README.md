@@ -1,27 +1,23 @@
 # 🪄 Remember Last Login
 
-Auto focuses the input field on page load for faster user interaction.
+Automatically shows the last used social login method for quicker re-entry.
 
 ---
 
 ## 💡 What it is
 
-- Automatically puts cursor in the input when the component mounts
-- Removes one extra tap/click, especially helpful on mobile
-- Great for login forms, search bars, or step-based flows
+- Displays the login method you used last time (e.g. Google, Apple)
+- Reduces friction for returning users by skipping redundant decisions
 
 ## 🧠 How it works
 
 ```ts
-// Focus input when component mounts
-useEffect(() => {
-  inputRef.current?.focus();
-}, []);
+// Save selected login method in localStorage
+localStorage.setItem("lastLoginProvider", "google");
 ```
 
-- Uses `useRef` to access the input DOM node
-- Triggers `focus()` once on mount using `useEffect`
-- Prevents unnecessary scroll with `preventScroll: true` if needed
+- Uses `localStorage` to remember and highlight the last provider
+- React state hooks + conditional rendering with Tailwind animations
 
 ---
 
@@ -30,7 +26,7 @@ useEffect(() => {
 - React (Next.js)
 - Shadcn UI
 - Tailwind CSS
-- TypeScript
+- Typescript
 
 ---
 
@@ -42,10 +38,8 @@ useEffect(() => {
 
 ## 🔗 Demo
 
-[lilygo.vercel.app/lab#02-input-autofocus](https://lilygo.vercel.app/lab#02-input-autofocus)
-
----
+[lilygo.vercel.app/lab#01-remember-last-login](https://lilygo.vercel.app/lab#01-remember-last-login)
 
 ## 💻 Source
 
-[components/lab/02-input-autofocus](https://github.com/devlilygo/devlilygo.github.io/tree/main/src/components/lab/02-input-autofocus)
+[components/lab/01-remember-last-login](https://github.com/devlilygo/devlilygo.github.io/tree/main/src/components/lab/01-remember-last-login)
