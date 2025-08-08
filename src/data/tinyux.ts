@@ -20,9 +20,8 @@ export const tinyuxList: TinyUx[] = [
   },
   {
     id: "02-input-autofocus",
-    title: "#02 — Input Autofocus",
-    description:
-      "Focuses the input field automatically when a modal or form appears",
+    title: "#02 — Smart Input Focus on Keypress",
+    description: "Focuses the input after first keypress to avoid scroll jump",
     Component: InputAutofocus,
     codeUrl:
       "https://github.com/devlilygo/devlilygo.github.io/tree/main/src/components/lab/02-input-autofocus",
