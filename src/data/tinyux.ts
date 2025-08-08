@@ -1,7 +1,7 @@
 import RememberLastLogin from "@/components/lab/01-remember-last-login/RememberLastLogin";
 import InputAutofocus from "@/components/lab/02-input-autofocus/InputAutofocus";
 import KeydownFocus from "@/components/lab/03-keydown-focus/PressEnterSubmit";
-import PressEnterSubmit from "@/components/lab/04-press-enter-submit copy/PressEnterSubmit";
+import PressEnterSubmit from "@/components/lab/04-press-enter-submit/PressEnterSubmit";
 
 export type TinyUx = {
   id: string;
