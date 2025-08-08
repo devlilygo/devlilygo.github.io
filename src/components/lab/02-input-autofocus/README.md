@@ -1,27 +1,37 @@
 # 🪄 Remember Last Login
 
-Auto focuses the input field on page load for faster user interaction.
+Auto-focuses the input only after the user starts typing, preventing unwanted scroll jumps and improving flow on mobile.
 
 ---
 
 ## 💡 What it is
 
-- Automatically puts cursor in the input when the component mounts
-- Removes one extra tap/click, especially helpful on mobile
-- Great for login forms, search bars, or step-based flows
+- Waits for the user to press any key before focusing the input
+- Avoids sudden scroll jumps on page load, especially on mobile
+- Keeps the interface clean while still minimizing user friction
 
 ## 🧠 How it works
 
 ```ts
-// Focus input when component mounts
+// Focus input when key down
 useEffect(() => {
-  inputRef.current?.focus();
+  const handleKeyDown = () => {
+    inputRef.current?.focus();
+    document.removeEventListener("keydown", handleKeyDown);
+  };
+
+  document.addEventListener("keydown", handleKeyDown);
+
+  return () => {
+    document.removeEventListener("keydown", handleKeyDown);
+  };
 }, []);
 ```
 
-- Uses `useRef` to access the input DOM node
-- Triggers `focus()` once on mount using `useEffect`
-- Prevents unnecessary scroll with `preventScroll: true` if needed
+- Uses `useRef` to target the input
+- Listens for the first `keydown` event
+- Calls `.focus()` only once when the user interacts
+- Prevents auto-scroll issues on page mount
 
 ---
 
