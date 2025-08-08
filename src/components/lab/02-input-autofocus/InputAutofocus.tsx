@@ -6,25 +6,8 @@ const InputAutofocus = () => {
   const inputRef = useRef<HTMLInputElement>(null);
 
   // auto focusing
-  // useEffect(() => {
-  //   const hasHash = window.location.hash;
-  //   if (!hasHash) {
-  //     inputRef.current?.focus({ preventScroll: true });
-  //   }
-  // }, []);
-
-  // changed: auto focusing when any key down
   useEffect(() => {
-    const handleKeyDown = () => {
-      inputRef.current?.focus();
-      document.removeEventListener("keydown", handleKeyDown);
-    };
-
-    document.addEventListener("keydown", handleKeyDown);
-
-    return () => {
-      document.removeEventListener("keydown", handleKeyDown);
-    };
+    inputRef.current?.focus();
   }, []);
 
   return (

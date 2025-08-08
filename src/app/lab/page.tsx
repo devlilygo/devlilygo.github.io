@@ -7,6 +7,7 @@ import classNames from "classnames";
 import { Home } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 const style = {
   container: classNames("font-jost", "h-screen overflow-hidden flex flex-col"),
@@ -34,7 +35,7 @@ const style = {
     "flex-1",
     "items-center",
     "justify-center",
-    "overflow-y-auto",
+    "overflow-hidden",
     "snap-y snap-mandatory"
   ),
   sideNav: classNames(
@@ -69,32 +70,18 @@ export default function LabHome() {
   const router = useRouter();
   const [activeId, setActiveId] = useState<string | null>(null);
 
-  const scrollToId = (id: string) => {
-    const target = document.getElementById(id);
-    target?.scrollIntoView({ behavior: "smooth", block: "start" });
-    history.replaceState(null, "", `#${id}`);
+  const handleNavClick = (id: string) => {
+    if (id !== activeId) {
+      setActiveId(id);
+      history.replaceState(null, "", `#${id}`);
+    }
   };
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setActiveId(entry.target.id);
-          }
-        });
-      },
-      {
-        root: document.querySelector("#lab-scroll"),
-        threshold: 0.6,
-      }
-    );
-
-    document
-      .querySelectorAll("section[id]")
-      .forEach((section) => observer.observe(section));
-
-    return () => observer.disconnect();
+    const hash = window.location.hash.replace("#", "");
+    const fallback = tinyuxList[0]?.id ?? null;
+    const found = tinyuxList.find((item) => item.id === hash);
+    setActiveId(found?.id ?? fallback);
   }, []);
 
   return (
@@ -112,15 +99,14 @@ export default function LabHome() {
         </div>
       </header>
 
-      <main className={style.mainContainer} id="lab-scroll">
-        {/* 📌 Side navigation */}
+      <main className={style.mainContainer}>
         <nav className={style.sideNav}>
           {tinyuxList.map((item) => (
             <button
               key={item.id}
               onClick={(e) => {
                 e.preventDefault();
-                scrollToId(item.id);
+                handleNavClick(item.id);
               }}
               className={classNames(
                 "flex items-center space-x-2 group",
@@ -145,21 +131,42 @@ export default function LabHome() {
           ))}
         </nav>
 
-        {tinyuxList.map(({ id, title, description, Component, codeUrl }) => (
-          <TinyUXSection
-            key={id}
-            id={id}
-            title={title}
-            description={description}
-          >
-            <Component />
-            <div className={style.viewCodeContainer}>
-              <a href={codeUrl} target="_blank" className={style.viewCode}>
-                💻 View Code
-              </a>
-            </div>
-          </TinyUXSection>
-        ))}
+        {activeId && (
+          <AnimatePresence mode="wait">
+            {tinyuxList.map(
+              ({ id, title, description, Component, codeUrl }) => {
+                if (id !== activeId) return null;
+                return (
+                  <motion.div
+                    key={id}
+                    initial={{ opacity: 0, y: 40 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -40 }}
+                    transition={{ duration: 0.3 }}
+                    className="relative w-full"
+                  >
+                    <TinyUXSection
+                      id={id}
+                      title={title}
+                      description={description}
+                    >
+                      <Component />
+                      <div className={style.viewCodeContainer}>
+                        <a
+                          href={codeUrl}
+                          target="_blank"
+                          className={style.viewCode}
+                        >
+                          💻 View Code
+                        </a>
+                      </div>
+                    </TinyUXSection>
+                  </motion.div>
+                );
+              }
+            )}
+          </AnimatePresence>
+        )}
       </main>
       <footer className={style.footer}>
         © 2025 Lily Go. All rights reserved. |

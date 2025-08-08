@@ -1,5 +1,7 @@
 import RememberLastLogin from "@/components/lab/01-remember-last-login/RememberLastLogin";
 import InputAutofocus from "@/components/lab/02-input-autofocus/InputAutofocus";
+import KeydownFocus from "@/components/lab/03-keydown-focus/PressEnterSubmit";
+import PressEnterSubmit from "@/components/lab/04-press-enter-submit copy/PressEnterSubmit";
 
 export type TinyUx = {
   id: string;
@@ -20,10 +22,26 @@ export const tinyuxList: TinyUx[] = [
   },
   {
     id: "02-input-autofocus",
-    title: "#02 — Smart Input Focus on Keypress",
-    description: "Focuses the input after first keypress to avoid scroll jump",
+    title: "#02 — Input Autofocus",
+    description: "Auto-focus the input field when the component mounts",
     Component: InputAutofocus,
     codeUrl:
       "https://github.com/devlilygo/devlilygo.github.io/tree/main/src/components/lab/02-input-autofocus",
+  },
+  {
+    id: "03-keydown-focus",
+    title: "#03 — Focus on Keypress",
+    description: "Focuses input after first keypress to avoid scroll jumps",
+    Component: KeydownFocus,
+    codeUrl:
+      "https://github.com/devlilygo/devlilygo.github.io/tree/main/src/components/lab/03-keydown-focus",
+  },
+  {
+    id: "04-press-enter-submit",
+    title: "#04 — Press Enter to Submit",
+    description: "Let users submit short forms using Enter key",
+    Component: PressEnterSubmit,
+    codeUrl:
+      "https://github.com/devlilygo/devlilygo.github.io/tree/main/src/components/lab/04-press-enter-submit",
   },
 ];
