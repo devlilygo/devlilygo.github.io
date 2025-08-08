@@ -2,6 +2,7 @@ import RememberLastLogin from "@/components/lab/01-remember-last-login/RememberL
 import InputAutofocus from "@/components/lab/02-input-autofocus/InputAutofocus";
 import KeydownFocus from "@/components/lab/03-keydown-focus/PressEnterSubmit";
 import PressEnterSubmit from "@/components/lab/04-press-enter-submit/PressEnterSubmit";
+import AutoFocusNextField from "@/components/lab/05-auto-focus-to-next-field/AutoFocusNextField";
 
 export type TinyUx = {
   id: string;
@@ -43,5 +44,14 @@ export const tinyuxList: TinyUx[] = [
     Component: PressEnterSubmit,
     codeUrl:
       "https://github.com/devlilygo/devlilygo.github.io/tree/main/src/components/lab/04-press-enter-submit",
+  },
+  {
+    id: "05-auto-focus-next-field",
+    title: "#05 — Auto-focus to Next Field",
+    description:
+      "Move focus automatically to the next input when one character is entered",
+    Component: AutoFocusNextField,
+    codeUrl:
+      "https://github.com/devlilygo/devlilygo.github.io/tree/main/src/components/lab/05-auto-focus-next-field",
   },
 ];
