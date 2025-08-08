@@ -52,6 +52,6 @@ export const tinyuxList: TinyUx[] = [
       "Move focus automatically to the next input when one character is entered",
     Component: AutoFocusNextField,
     codeUrl:
-      "https://github.com/devlilygo/devlilygo.github.io/tree/main/src/components/lab/05-auto-focus-next-field",
+      "https://github.com/devlilygo/devlilygo.github.io/tree/main/src/components/lab/05-auto-focus-to-next-field",
   },
 ];
