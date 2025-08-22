@@ -4,6 +4,7 @@ import KeydownFocus from "@/components/lab/03-keydown-focus/PressEnterSubmit";
 import PressEnterSubmit from "@/components/lab/04-press-enter-submit/PressEnterSubmit";
 import AutoFocusNextField from "@/components/lab/05-auto-focus-to-next-field/AutoFocusNextField";
 import PasswordRequirementsInline from "@/components/lab/06-password-requirements-inline/PasswordRequirementInline";
+import DisableSubmitUntilValid from "@/components/lab/07-disable-submit-until-valid/DisableSubmitUntilValid";
 
 export type TinyUx = {
   id: string;
@@ -63,5 +64,14 @@ export const tinyuxList: TinyUx[] = [
     Component: PasswordRequirementsInline,
     codeUrl:
       "https://github.com/devlilygo/devlilygo.github.io/tree/main/src/components/lab/06-password-requirements-inline",
+  },
+  {
+    id: "07-disable-submit-until-valid",
+    title: "#07 — Disable Submit Until Form is Valid",
+    description:
+      "Prevent submission until all required fields are valid, reducing errors and frustration",
+    Component: DisableSubmitUntilValid,
+    codeUrl:
+      "https://github.com/devlilygo/devlilygo.github.io/tree/main/src/components/lab/07-disable-submit-until-valid",
   },
 ];
