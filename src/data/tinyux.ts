@@ -3,6 +3,7 @@ import InputAutofocus from "@/components/lab/02-input-autofocus/InputAutofocus";
 import KeydownFocus from "@/components/lab/03-keydown-focus/PressEnterSubmit";
 import PressEnterSubmit from "@/components/lab/04-press-enter-submit/PressEnterSubmit";
 import AutoFocusNextField from "@/components/lab/05-auto-focus-to-next-field/AutoFocusNextField";
+import PasswordRequirementInput from "@/components/lab/06-password-requirement-inline/PasswordRequirementInput";
 
 export type TinyUx = {
   id: string;
@@ -53,5 +54,14 @@ export const tinyuxList: TinyUx[] = [
     Component: AutoFocusNextField,
     codeUrl:
       "https://github.com/devlilygo/devlilygo.github.io/tree/main/src/components/lab/05-auto-focus-to-next-field",
+  },
+  {
+    id: "06-password-requirement-input",
+    title: "#06 — Show Password Requirements Inline",
+    description:
+      "Guide users by showing password strength rules that update live as they type",
+    Component: PasswordRequirementInput,
+    codeUrl:
+      "https://github.com/devlilygo/devlilygo.github.io/tree/main/src/components/lab/06-password-requirement-input",
   },
 ];
