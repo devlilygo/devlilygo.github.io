@@ -18,7 +18,7 @@ const rules = [
   },
 ];
 
-const PasswordRequirementInput = () => {
+const PasswordRequirementsInline = () => {
   const [password, setPassword] = useState("");
 
   return (
@@ -52,4 +52,4 @@ const PasswordRequirementInput = () => {
   );
 };
 
-export default PasswordRequirementInput;
+export default PasswordRequirementsInline;

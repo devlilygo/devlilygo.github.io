@@ -67,10 +67,10 @@ const rules = [
 
 ## 🔗 Demo
 
-[lilygo.vercel.app/lab#06-password-requirement-input](https://lilygo.vercel.app/lab#06-password-requirement-input)
+[lilygo.vercel.app/lab#06-password-requirements-inline](https://lilygo.vercel.app/lab#06-password-requirements-inline)
 
 ---
 
 ## 💻 Source
 
-[components/lab/06-password-requirement-input](https://github.com/devlilygo/devlilygo.github.io/tree/main/src/components/lab/06-password-requirement-input)
+[components/lab/06-password-requirements-inline](https://github.com/devlilygo/devlilygo.github.io/tree/main/src/components/lab/06-password-requirements-inline)
