@@ -1,5 +1,24 @@
+import classNames from "classnames";
+import Landing from "./Landing";
+
+const style = {
+  container: classNames(
+    "font-montserrat",
+    "flex",
+    "flex-col",
+    "h-full",
+    "w-full",
+    "w-min-[1340px]",
+    "text-[#333333]"
+  ),
+};
+
 const MainTemplate = () => {
-  return <div>main v3.0</div>;
+  return (
+    <div className={style.container}>
+      <Landing />
+    </div>
+  );
 };
 
 export default MainTemplate;

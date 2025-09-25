@@ -65,6 +65,7 @@ module.exports = {
         fira: ["Fira Mono", "monospace"],
         bebas: ["Bebas Neue", "sans-serif"],
         jost: ["Jost", "sans-serif"],
+        montserrat: ["Montserrat", "sans-serif"],
       },
       keyframes: {
         fadeIn: {
