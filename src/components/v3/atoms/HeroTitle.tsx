@@ -16,7 +16,7 @@ export default function HeroTitle() {
       variants={{
         visible: { transition: { staggerChildren: 0.2 } },
       }}
-      className="flex flex-col justify-center sm:text-4xl md:text-7xl lg:text-8xl xl:text-9xl font-bold leading-tight text-left py-20"
+      className="flex flex-col justify-center sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold leading-tight text-left pb-16 pt-20 tracking-tighter"
     >
       {lines.map((line, i) => (
         <div key={i} className="mb-2">

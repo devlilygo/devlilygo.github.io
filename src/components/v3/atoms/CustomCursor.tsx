@@ -22,7 +22,7 @@ const CustomCursor = () => {
       {/* 원 커서 */}
       <motion.div
         className="fixed top-0 left-0 w-6 h-6 pointer-events-none "
-        animate={{ x: pos.x - 50, y: pos.y - 40 }}
+        animate={{ x: pos.x - 25, y: pos.y - 25 }}
         transition={{ type: "spring", stiffness: 500, damping: 30 }}
       >
         <LiquidGlass

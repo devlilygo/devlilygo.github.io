@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 const style = {
   containter: classNames("flex flex-col h-auto w-[600px] items-left gap-4"),
   textContainter: classNames(
-    "flex flex-col h-52 w-[600px] items-left gap-4 font-medium text-xl mb-6"
+    "flex flex-col h-48 w-[600px] items-left gap-4 font-medium text-xl mb-6"
   ),
   button: classNames(
     "flex",
@@ -16,11 +16,17 @@ const style = {
     "bg-[#d0d9f5]",
     "hover:bg-[#364c84]",
     "hover:text-[#e7f1ab]",
+    "text-xl",
     "transition"
   ),
 };
 
 const Introduction = () => {
+  const scrollToSection = (id: string) => {
+    const el = document.getElementById(id);
+    if (el) el.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <div className="flex flex-col">
       <motion.div
@@ -58,7 +64,12 @@ const Introduction = () => {
           }}
           className="flex w-40 h-auto items-center justify-center"
         >
-          <div className={style.button}>CONTACT</div>
+          <div
+            className={style.button}
+            onClick={() => scrollToSection("contacts")}
+          >
+            CONTACT
+          </div>
         </motion.div>
       </motion.div>
     </div>

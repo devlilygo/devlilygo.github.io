@@ -1,8 +1,7 @@
 import classNames from "classnames";
 import HeroTitle from "../atoms/HeroTitle";
-import ScrollIndicator from "../atoms/ScrollIndicator";
 import SpinningLogo from "../atoms/SpinningLogo";
-import Introduction from "../organisms/Introduction";
+import Introduction from "../molecules/Introduction";
 import HeroCoffee from "../atoms/HeroCoffee";
 
 const style = {
@@ -14,7 +13,7 @@ const style = {
     "items-center",
     "justify-center",
     "bg-[#fffdf5]",
-    "pb-12"
+    "pb-8"
   ),
 };
 
@@ -23,11 +22,10 @@ const Landing = () => {
     <div className={style.container}>
       <SpinningLogo />
       <HeroTitle />
-      <div className="flex w-full h-auto items-center justify-center gap-10">
+      <div className="flex w-full h-auto items-start justify-center gap-10">
         <HeroCoffee />
         <Introduction />
       </div>
-      <ScrollIndicator />
     </div>
   );
 };

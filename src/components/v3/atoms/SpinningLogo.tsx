@@ -1,8 +1,16 @@
 import { motion } from "framer-motion";
 
 const SpinningLogo = () => {
+  const scrollToSection = (id: string) => {
+    const el = document.getElementById(id);
+    if (el) el.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
-    <div className="absolute top-10 transition-transform duration-300 hover:scale-110">
+    <div
+      className="absolute top-10 transition-transform duration-300 hover:scale-110"
+      onClick={() => scrollToSection("landing")}
+    >
       <motion.div
         whileTap={{
           scale: 0.9,

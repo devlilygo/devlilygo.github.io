@@ -4,11 +4,16 @@ import { motion } from "framer-motion";
 
 const style = {
   containter: classNames(
-    "flex flex-col h-[400px] w-[500px] justify-center mr-4"
+    "flex flex-col h-[280px] w-[500px] justify-center mr-4"
   ),
 };
 
 const HeroCoffee = () => {
+  const scrollToSection = (id: string) => {
+    const el = document.getElementById(id);
+    if (el) el.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <div className={style.containter}>
       <motion.div
@@ -35,11 +40,12 @@ const HeroCoffee = () => {
             <Image
               src="/v3/coffee.png"
               alt="coffee"
-              width={500}
-              height={500}
+              width={400}
+              height={400}
               className="transition group-hover:rotate-12"
+              onClick={() => scrollToSection("works")}
             />
-            <div className="absolute top-24 left-6 -rotate-45 flex items-center justify-center text-xl opacity-0 group-hover:opacity-100 transition">
+            <div className="absolute top-20 left-10 -rotate-45 flex items-center justify-center text-xl opacity-0 group-hover:opacity-100 transition">
               COFFEE CHAT?
             </div>
           </div>
