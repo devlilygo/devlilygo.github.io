@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const style = {
   containter: classNames(
-    "flex flex-col h-[280px] w-[500px] justify-center mr-4"
+    "flex flex-col h-[200px] w-full md:h-[280px] md:w-[500px] justify-center mr-4"
   ),
 };
 

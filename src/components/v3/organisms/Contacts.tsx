@@ -23,7 +23,9 @@ const style = {
     "items-center",
     "justify-center",
     "rounded-full",
-    "text-[110px]",
+    "text-4xl",
+    "md:text-6xl",
+    "lg:text-[110px]",
     "leading-[0.6em]",
     "tracking-tighter",
     "font-black",
@@ -34,7 +36,32 @@ const style = {
     "cursor-none",
     "text-[#333333]"
   ),
-  accentText: classNames("font-bodoni", "text-2xl", "italic", "font-semibold"),
+  accentText: classNames(
+    "font-bodoni",
+    "text-lg",
+    "lg:text-2xl",
+    "italic",
+    "font-semibold"
+  ),
+  descriptionArea: classNames(
+    "text-sm",
+    "lg:text-xl",
+    "font-light",
+    "flex",
+    "flex-col",
+    "h-[300px]",
+    "md:h-full",
+    "overflow-auto",
+    "lg:overflow-hidden",
+    "lg:h-fit",
+    "w-fit",
+    "bg-[#95b1ee]",
+    "text-[#fffdf5]",
+    "p-4",
+    "tracking-tighter",
+    "rounded-sm",
+    "md:rounded-none"
+  ),
 };
 
 const Contacts = () => {
@@ -46,21 +73,21 @@ const Contacts = () => {
       await navigator.clipboard.writeText("devlilygo@gmail.com");
       setCopied(true);
       toast("Email copied to clipboard!");
-      setTimeout(() => setCopied(false), 2000); // 2초 후 상태 초기화
+      setTimeout(() => setCopied(false), 2000);
     } catch (err) {
       console.error("Copy Failed:", err);
     }
   };
   return (
     <div className={style.container}>
-      <div className="flex h-4/5 w-full mt-32 p-12 items-center justify-center">
-        <div className="flex flex-col h-full w-full gap-4">
+      <div className="flex flex-col lg:flex-row h-4/5 w-full mt-32 p-12 items-center justify-center">
+        <div className="flex flex-col h-full w-full gap-4 md:gap-2 lg:gap-0">
           <motion.div
             whileTap={{
               scale: 0.9,
             }}
             transition={{
-              duration: 0.1, // ⚡ 엄청 빠른 반응
+              duration: 0.1,
               ease: "easeOut",
             }}
           >
@@ -77,7 +104,7 @@ const Contacts = () => {
               scale: 0.9,
             }}
             transition={{
-              duration: 0.1, // ⚡ 엄청 빠른 반응
+              duration: 0.1,
               ease: "easeOut",
             }}
           >
@@ -94,7 +121,7 @@ const Contacts = () => {
               scale: 0.9,
             }}
             transition={{
-              duration: 0.1, // ⚡ 엄청 빠른 반응
+              duration: 0.1,
               ease: "easeOut",
             }}
           >
@@ -112,7 +139,7 @@ const Contacts = () => {
               scale: 0.9,
             }}
             transition={{
-              duration: 0.1, // ⚡ 엄청 빠른 반응
+              duration: 0.1,
               ease: "easeOut",
             }}
           >
@@ -130,7 +157,7 @@ const Contacts = () => {
               scale: 0.9,
             }}
             transition={{
-              duration: 0.1, // ⚡ 엄청 빠른 반응
+              duration: 0.1,
               ease: "easeOut",
             }}
           >
@@ -140,7 +167,7 @@ const Contacts = () => {
           </motion.div>
         </div>
         <div className="flex flex-col h-full w-full items-end justify-between gap-4">
-          <div className="text-xl font-light flex flex-col h-fit w-fit bg-[#95b1ee] text-[#fffdf5] p-4 tracking-tighter">
+          <div className={style.descriptionArea}>
             <span>
               I am a person who likes working in{" "}
               <b className={style.accentText}>agile</b>, taking small steps and
@@ -188,20 +215,20 @@ const Contacts = () => {
             className="flex"
           >
             <a
-              className={style.text}
+              className={classNames(style.text, "hidden lg:flex")}
               // onClick={() => router.push("/lab")}
               href="https://lilygo.vercel.app/lab"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FlaskConical size={100} />
+              <FlaskConical size={80} />
               Lily&apos;s Lab
             </a>
           </motion.div>
         </div>
       </div>
 
-      <div className="flex h-1/5 w-full">
+      <div className="flex h-[100px] lg:h-1/5 w-full items-center">
         <MarqueeText />
       </div>
     </div>

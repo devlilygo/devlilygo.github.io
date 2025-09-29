@@ -10,30 +10,38 @@ const style = {
     "h-screen",
     "items-center",
     "bg-[#fffdf5]",
-    "p-12",
-    "py-32"
+    "lg:p-12",
+    "lg:py-32"
   ),
   title: classNames(
     "flex",
     "flex-col",
     "w-1/3",
-    "h-full",
+    "h-fit",
+    "lg:h-full",
     "justify-start",
-    "text-[175px]",
+    "text-4xl",
+    "md:text-6xl",
+    "lg:text-[175px]",
     "leading-[0.8]",
     "tracking-[-0.1em]",
     "font-extralight",
-    "pl-20",
+    "px-10",
+    "mt-32",
+    "lg:mt-0",
+    "lg:pl-20",
     "text-[#364c84]"
   ),
   descriptionArea: classNames(
     "flex",
     "flex-col",
-    "w-2/3",
+    "w-full",
+    "lg:w-2/3",
     "h-full",
     "justify-between",
     "items-center",
-    "ml-32"
+    "px-10",
+    "lg:ml-32"
   ),
   description: classNames(
     "flex",
@@ -41,13 +49,19 @@ const style = {
     "w-full",
     "h-full",
     "justify-start",
-    "text-xl",
-    "leading-10",
+    "text-sm",
+    "leading-5",
+    "md:text-lg",
+    "lg:text-xl",
+    "lg:leading-10",
     "tracking-[-0.04em]",
     "font-light",
     "text-left",
     "text-[#364c84]",
-    "gap-2",
+    "gap-6",
+    "lg:gap-2",
+    "mt-10",
+    "lg:mt-0",
     "p-2"
   ),
 };
@@ -55,7 +69,7 @@ const style = {
 const AboutMe = () => {
   return (
     <div className={style.container}>
-      <div className="flex w-full h-full">
+      <div className="flex w-full h-full flex-col lg:flex-row">
         <div className={style.title}>
           <span>HAPPY</span>
           <span>TO</span>
@@ -63,7 +77,7 @@ const AboutMe = () => {
           <span>YOU!</span>
         </div>
         <div className={style.descriptionArea}>
-          <div className="flex w-full h-[350px] justify-center items-center p-10 pr-32">
+          <div className="flex w-full h-[150px] lg:h-[350px] justify-center items-center lg:p-10 lg:pr-32 ">
             <Image
               src="/v3/croissant.png"
               alt="croissant"

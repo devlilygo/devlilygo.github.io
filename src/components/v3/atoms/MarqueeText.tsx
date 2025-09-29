@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 import { Coffee } from "lucide-react";
 
 export default function MarqueeText() {
-  // 원하는 문구들
   const items = [
     "I'm open to work",
     "let's work together",
@@ -11,26 +10,27 @@ export default function MarqueeText() {
     "available for new opportunities",
   ];
 
-  // 트랙 반복
   const track = Array(4).fill(items).flat();
 
   return (
-    <div className="relative overflow-hidden bg-[#364c84] text-[#fffdf5] p-4">
+    <div className="relative overflow-hidden bg-[#364c84] text-[#fffdf5] p-4 flex h-full w-full">
       <motion.div
         className="flex gap-2 whitespace-nowrap will-change-transform"
         animate={{ x: ["0%", "-50%"] }}
-        transition={{ duration: 20, ease: "linear", repeat: Infinity }}
+        transition={{ duration: 60, ease: "linear", repeat: Infinity }}
       >
         {track.map((text, i) => (
-          <>
-            <span
-              key={i}
-              className="flex items-center text-6xl md:text-7xl font-bold tracking-tight"
-            >
-              <Coffee width={60} height={60} className="m-8 text-[#fffdf5]" />
-              {text}
-            </span>
-          </>
+          <span
+            key={i}
+            className="flex items-center text-2xl md:text-7xl font-bold tracking-tight"
+          >
+            <Coffee
+              width={60}
+              height={60}
+              className="mx-2 md:m-8 text-[#fffdf5]"
+            />
+            {text}
+          </span>
         ))}
       </motion.div>
 

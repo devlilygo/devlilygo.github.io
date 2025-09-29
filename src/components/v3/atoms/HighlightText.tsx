@@ -40,7 +40,7 @@ export const HighlightText = ({
       <span className="relative z-10 text-[#364c84] font-bold">{children}</span>
       <span
         key={isVisible ? "active" : "inactive"}
-        className={`absolute left-0 bottom-1 lg:h-8 h-6 ${
+        className={`absolute left-0 bottom-1 md:h-8 h-4 ${
           isVisible ? `w-full animate-highlight` : "w-0"
         } ${bgColor} z-0 ${customOpacity}`}
       />
