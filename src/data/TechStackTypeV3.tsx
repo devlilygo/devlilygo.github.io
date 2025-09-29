@@ -1,18 +1,33 @@
-export type TechStackType = {
+import { AccentUnderline } from "@/components/v3/atoms/AccentUnderline";
+import { HighlightText } from "@/components/v3/atoms/HighlightText";
+import React from "react";
+
+export type TechStackTypeV3 = {
   category: string;
   // items: { name: string; description: string }[];
-  items: { name: string; description: string }[];
+  items: { name: string; description: string | React.ReactNode }[];
 };
 
-export const techStackData = {
+export const techStackTypeV3 = {
   dashboard: [
     {
       category: "Summary",
       items: [
         {
           name: "",
-          description: `Built a scalable monitoring dashboard for small manufacturers,
-            focusing on real-time data visualization and modular architecture`,
+          description: (
+            <span>
+              Built
+              <HighlightText>
+                a scalable monitoring dashboard
+              </HighlightText>{" "}
+              for&nbsp;
+              <AccentUnderline>small manufacturers</AccentUnderline>,
+              <br />
+              focusing on <b>real-time data visualization</b> and&nbsp;
+              <b>modular architecture</b>
+            </span>
+          ),
         },
       ],
     },
@@ -88,9 +103,19 @@ export const techStackData = {
       items: [
         {
           name: "",
-          description: `Developed a modular monitoring system for major semiconductor clients
-            such as SK Hynix, Samsung and SK ON
-            with real-time data display and status tracking`,
+          description: (
+            <span>
+              Developed
+              <HighlightText>a modular monitoring system </HighlightText>
+              <br />
+              for major semiconductor clients
+              <br />
+              such as&nbsp;
+              <AccentUnderline>SK Hynix, Samsung and SK ON</AccentUnderline>
+              <br />
+              with <b>real-time data display</b> and <b>status tracking</b>
+            </span>
+          ),
         },
       ],
     },
@@ -150,9 +175,19 @@ export const techStackData = {
       items: [
         {
           name: "",
-          description: `Built a fault detection and classification UI for major semiconductor clients
-            such as SK Hynix, Samsung and SK ON
-            with real-time visualization and modular components`,
+          description: (
+            <span>
+              Built
+              <HighlightText>
+                a fault detection and classification UI
+              </HighlightText>
+              <br />
+              for major semiconductor clients <br /> such as&nbsp;
+              <AccentUnderline>SK Hynix, Samsung and SK ON</AccentUnderline>
+              <br />
+              with <b>real-time visualization</b> and <b>modular components</b>
+            </span>
+          ),
         },
       ],
     },
@@ -220,8 +255,18 @@ export const techStackData = {
       items: [
         {
           name: "",
-          description: `Operated and maintained a legacy billing system with monthly feature updates,
-            batch program development, and client-specific customizations.`,
+          description: (
+            <span>
+              Operated and maintained
+              <HighlightText>a legacy billing system</HighlightText>
+              of&nbsp;&nbsp;
+              <AccentUnderline>SK Telecom</AccentUnderline>
+              <br /> with <b>monthly feature updates</b>,
+              <b>batch program development</b>,
+              <br />
+              and <b>client-specific customizations</b>.
+            </span>
+          ),
         },
       ],
     },

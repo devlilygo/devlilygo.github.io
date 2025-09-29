@@ -1,7 +1,6 @@
 import { Toaster } from "@/components/ui/sonner";
-import "./globals.css";
+import "../globals.css";
 import type { Metadata } from "next";
-import CustomCursor from "@/components/v3/atoms/CustomCursor";
 
 export const metadata: Metadata = {
   title: "Lily Go | Frontend Developer",
@@ -18,7 +17,6 @@ export default function RootLayout({
       <body>
         <main>{children}</main>
         <Toaster />
-        <CustomCursor />
       </body>
     </html>
   );
