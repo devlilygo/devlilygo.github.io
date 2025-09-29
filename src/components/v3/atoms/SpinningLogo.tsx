@@ -8,7 +8,7 @@ const SpinningLogo = () => {
 
   return (
     <div
-      className="absolute top-10 transition-transform duration-300 hover:scale-110"
+      className="absolute top-10 transition-transform duration-300 hover:scale-125 z-40"
       onClick={() => scrollToSection("landing")}
     >
       <motion.div

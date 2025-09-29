@@ -5,9 +5,11 @@ import { useEffect, useRef, useState } from "react";
 export const HighlightText = ({
   children,
   color = "default",
+  opacity = 100,
 }: {
   children: React.ReactNode;
   color?: "default" | "yellow" | "pink" | "blue";
+  opacity?: number;
 }) => {
   const ref = useRef<HTMLSpanElement>(null);
   const [isVisible, setIsVisible] = useState(false);
@@ -28,8 +30,10 @@ export const HighlightText = ({
     default: "bg-[#e7f1ab]",
     yellow: "bg-[#FEF9C3]",
     pink: "bg-[#FDE2E4]",
-    blue: "bg-[#DBEAFE]",
+    blue: "bg-[#95b1ee]",
   }[color];
+
+  const customOpacity = "opacity-" + opacity;
 
   return (
     <span className="relative inline-block mx-1 px-[1px]" ref={ref}>
@@ -38,7 +42,7 @@ export const HighlightText = ({
         key={isVisible ? "active" : "inactive"}
         className={`absolute left-0 bottom-1 lg:h-8 h-6 ${
           isVisible ? `w-full animate-highlight` : "w-0"
-        } ${bgColor} z-0`}
+        } ${bgColor} z-0 ${customOpacity}`}
       />
     </span>
   );
