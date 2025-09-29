@@ -15,6 +15,16 @@ const style = {
     "bg-[#fffdf5]",
     "pb-8"
   ),
+  subContainer: classNames(
+    "flex",
+    "flex-col",
+    "md:flex-row",
+    "w-full",
+    "h-auto",
+    "items-start",
+    "justify-center",
+    "gap-10"
+  ),
 };
 
 const Landing = () => {
@@ -22,7 +32,7 @@ const Landing = () => {
     <div className={style.container}>
       <SpinningLogo />
       <HeroTitle />
-      <div className="flex w-full h-auto items-start justify-center gap-10">
+      <div className={style.subContainer}>
         <HeroCoffee />
         <Introduction />
       </div>

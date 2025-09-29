@@ -27,6 +27,31 @@ import {
   SiAxios,
 } from "react-icons/si";
 import { MdOutlineApi } from "react-icons/md";
+import classNames from "classnames";
+
+const style = {
+  container: classNames(
+    "overflow-hidden",
+    "[mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]",
+    "pt-12"
+  ),
+  itemArea: classNames(
+    "flex",
+    "gap-3",
+    "md:gap-8",
+    "whitespace-nowrap",
+    "will-change-transform"
+  ),
+  textArea: classNames(
+    "flex",
+    "items-center",
+    "gap-2",
+    "text-base",
+    "md:text-lg",
+    "lg:text-xl",
+    "font-semibold"
+  ),
+};
 
 export default function MarqueeSkills() {
   // 문자열 대신 컴포넌트 배열
@@ -71,17 +96,14 @@ export default function MarqueeSkills() {
   const track = Array(3).fill(items).flat();
 
   return (
-    <div className="overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)] pt-12">
+    <div className={style.container}>
       <motion.div
-        className="flex gap-8 whitespace-nowrap will-change-transform"
+        className={style.itemArea}
         animate={{ x: ["0%", "-50%"] }}
         transition={{ duration: 60, ease: "linear", repeat: Infinity }}
       >
         {track.map((item, i) => (
-          <span
-            key={i}
-            className="flex items-center gap-2 text-xl font-semibold"
-          >
+          <span key={i} className={style.textArea}>
             {item.icon} {item.label}
           </span>
         ))}

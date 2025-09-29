@@ -8,7 +8,6 @@ import { useState } from "react";
 import { CircleX } from "lucide-react";
 import TechStack from "../atoms/TechStack";
 import { techStackTypeV3 } from "@/data/TechStackTypeV3";
-// import { ImageViewer } from "../molecules/ImageViewer";
 
 const style = {
   container: classNames(
@@ -20,6 +19,28 @@ const style = {
     "justify-evenly",
     "bg-[#d0d9f5]",
     "p-12"
+  ),
+  marqueeArea: classNames(
+    "relative",
+    "flex",
+    "w-full",
+    "h-1/4",
+    "overflow-x-hidden",
+    "items-center",
+    "justify-center"
+  ),
+  cardArea: classNames(
+    "flex",
+    "flex-col",
+    "md:flex-row",
+    "w-full",
+    "h-3/4",
+    "items-center",
+    "justify-center",
+    "gap-6",
+    "px-20",
+    "pt-4",
+    "pb-20"
   ),
   title: classNames(
     "flex",
@@ -35,7 +56,73 @@ const style = {
     "pt-80",
     "pb-24",
     "border"
-    // "border-black"
+  ),
+  firstLayer: classNames(
+    "fixed",
+    "top-0",
+    "left-0",
+    "w-full",
+    "h-full",
+    "bg-[#95b1ee]",
+    "z-40"
+  ),
+  secondLayer: classNames(
+    "fixed",
+    "top-0",
+    "left-0",
+    "w-full",
+    "h-full",
+    "bg-[#364c84]",
+    "z-50",
+    "flex",
+    "flex-col",
+    "items-center",
+    "justify-between",
+    "text-[#fffdf5]",
+    "cursor-default"
+  ),
+  layerContainer: classNames(
+    "w-full",
+    "h-full",
+    "flex",
+    "flex-col",
+    "lg:flex-row",
+    "items-center",
+    "justify-center"
+  ),
+  titleArea: classNames(
+    "h-[10%]",
+    "lg:h-full",
+    "w-full",
+    "lg:w-1/2",
+    "text-6xl",
+    "lg:text-[140px]",
+    "font-bold",
+    "items-start",
+    "justify-center",
+    "text-wrap",
+    "leading-[0.8]",
+    "tracking-tighter"
+  ),
+  descriptionArea: classNames(
+    "h-[80%]",
+    "lg:h-full",
+    "overflow-auto",
+    "lg:overflow-hidden",
+    "w-full",
+    "lg:w-1/2",
+    "flex",
+    "items-center",
+    "justify-center",
+    "p-5",
+    "lg:pt-20",
+    "lg:p-0",
+    "lg:pl-20",
+    "lg:pr-20",
+    "mb-32",
+    "mt-20",
+    "lg:mb-0",
+    "mb:mt-0"
   ),
 };
 
@@ -71,10 +158,10 @@ const Works = () => {
 
   return (
     <div className={style.container}>
-      <div className="relative flex w-full h-1/4 overflow-x-hidden items-center justify-center">
+      <div className={style.marqueeArea}>
         <MarqueeSkills />
       </div>
-      <div className="flex w-full h-3/4 items-center justify-center gap-6 px-20 pt-4 pb-20">
+      <div className={style.cardArea}>
         {WorksItems.map((item) => (
           <motion.div
             key={item.id}
@@ -94,7 +181,6 @@ const Works = () => {
         ))}
       </div>
 
-      {/* 🔑 오버레이는 map 밖에 단 하나만 */}
       <AnimatePresence mode="wait" initial={false}>
         {selectedId !== null && (
           <motion.div key={selectedId}>
@@ -108,7 +194,7 @@ const Works = () => {
                 ease: "easeInOut",
                 delay: 0,
               }}
-              className="fixed top-0 left-0 w-full h-full bg-[#95b1ee] z-40"
+              className={style.firstLayer}
             />
 
             {/* 두 번째 레이어 */}
@@ -121,13 +207,13 @@ const Works = () => {
                 ease: "easeInOut",
                 delay: 0.4,
               }}
-              className="fixed top-0 left-0 w-full h-full bg-[#364c84] z-50 flex flex-col items-center justify-between text-[#fffdf5] cursor-default"
+              className={style.secondLayer}
             >
-              <div className="w-full h-full flex items-center justify-center">
-                <div className="h-full w-1/2 text-[140px] font-bold items-start justify-center text-wrap leading-[0.8] tracking-tighter">
+              <div className={style.layerContainer}>
+                <div className={style.titleArea}>
                   {WorksItems[selectedId].title}
                 </div>
-                <div className="h-full w-1/2 flex items-center justify-center pl-10 pr-20">
+                <div className={style.descriptionArea}>
                   <TechStack data={WorksItems[selectedId].description} />
                 </div>
               </div>
