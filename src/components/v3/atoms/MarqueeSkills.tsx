@@ -28,7 +28,7 @@ import {
 } from "react-icons/si";
 import { MdOutlineApi } from "react-icons/md";
 
-export default function Marquee() {
+export default function MarqueeSkills() {
   // 문자열 대신 컴포넌트 배열
   const items = [
     { icon: <FaReact style={{ color: "#61DAFB" }} />, label: "React" },

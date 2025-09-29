@@ -1,7 +1,7 @@
 "use client";
 
 import classNames from "classnames";
-import Marquee from "../atoms/Marquee";
+import MarqueeSkills from "../atoms/MarqueeSkills";
 import { ImageCard } from "../molecules/ImageCard";
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
@@ -72,7 +72,7 @@ const Works = () => {
   return (
     <div className={style.container}>
       <div className="relative flex w-full h-1/4 overflow-x-hidden items-center justify-center">
-        <Marquee />
+        <MarqueeSkills />
       </div>
       <div className="flex w-full h-3/4 items-center justify-center gap-6 px-20 pt-4 pb-20">
         {WorksItems.map((item) => (

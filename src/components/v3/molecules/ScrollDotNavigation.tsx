@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 
-const SECTION_IDS = ["landing", "aboutme", "works"];
+const SECTION_IDS = ["landing", "works", "aboutme", "contacts"];
 
 export const ScrollDotNavigation = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -38,14 +38,14 @@ export const ScrollDotNavigation = () => {
   };
 
   return (
-    <div className="fixed left-6 top-1/2 -translate-y-1/2 z-50 flex flex-col gap-4">
+    <div className="fixed right-6 top-1/2 -translate-y-1/2 z-50 flex flex-col gap-4">
       {SECTION_IDS.map((id, i) => (
         <button
           key={id}
           onClick={() => scrollToSection(id)}
           className={`w-3 h-3 rounded-full transition-all duration-300 ${
-            activeIndex === i ? "bg-[#364c84] scale-110" : "bg-[#d0d9f5]"
-          } hover:bg-[#95b1ee]`}
+            activeIndex === i ? "bg-[#364c84] scale-110" : "bg-[#95b1ee]"
+          } hover:bg-[#e7f1ab]`}
         />
       ))}
     </div>

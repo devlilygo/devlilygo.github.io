@@ -5,6 +5,7 @@ import Works from "../organisms/Works";
 import Contacts from "../organisms/Contacts";
 import ScrollIndicator from "../atoms/ScrollIndicator";
 import { useEffect, useRef, useState } from "react";
+import { ScrollDotNavigation } from "../molecules/ScrollDotNavigation";
 // import { ScrollDotNavigation } from "../molecules/ScrollDotNavigation";
 
 const style = {
@@ -51,7 +52,7 @@ const MainTemplate = () => {
   return (
     <div className={style.container}>
       {show && <ScrollIndicator />}
-      {/* <ScrollDotNavigation /> */}
+      <ScrollDotNavigation />
       <section id="landing" className={style.snapContainer}>
         <Landing />
       </section>

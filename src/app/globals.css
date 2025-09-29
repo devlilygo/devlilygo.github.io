@@ -29,6 +29,10 @@ p {
   @apply leading-relaxed;
 }
 
+a {
+  @apply cursor-none !important;
+}
+
 /* ---------- Button Reset ---------- */
 button {
   @apply transition duration-200 ease-in-out;

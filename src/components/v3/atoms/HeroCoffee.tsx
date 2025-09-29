@@ -45,8 +45,8 @@ const HeroCoffee = () => {
               className="transition group-hover:rotate-12"
               onClick={() => scrollToSection("works")}
             />
-            <div className="absolute top-20 left-10 -rotate-45 flex items-center justify-center text-xl opacity-0 group-hover:opacity-100 transition">
-              COFFEE CHAT?
+            <div className="absolute top-16 left-16 -rotate-45 flex items-center justify-center text-2xl opacity-0 group-hover:opacity-100 transition font-bodoni italic font-bold">
+              coffee chat?
             </div>
           </div>
         </motion.div>

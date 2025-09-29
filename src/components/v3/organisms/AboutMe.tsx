@@ -63,7 +63,7 @@ const AboutMe = () => {
           <span>YOU!</span>
         </div>
         <div className={style.descriptionArea}>
-          <div className="flex w-full h-[400px] justify-center items-center p-10 pr-32">
+          <div className="flex w-full h-[350px] justify-center items-center p-10 pr-32">
             <Image
               src="/v3/croissant.png"
               alt="croissant"
@@ -100,23 +100,21 @@ const AboutMe = () => {
               <HighlightText color="blue" opacity={50}>
                 creativity fueled by kindness
               </HighlightText>
-              , and in doing things with care,
-              <br />
-              even when no one’s watching.
+              , and in doing things with care.
             </span>
             <span>
               I believe
               <HighlightText color="blue" opacity={50}>
                 details are not just details
-              </HighlightText>{" "}
-              — they shape experience.
+              </HighlightText>
+              , they shape experience.
             </span>
             <span>
               I believe in
               <HighlightText color="blue" opacity={50}>
                 building thoughtfully{" "}
               </HighlightText>
-              — with intention, not just logic.
+              with intention, not just logic.
             </span>
           </div>
         </div>
