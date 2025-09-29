@@ -26,8 +26,8 @@ const CustomCursor = () => {
         transition={{ type: "spring", stiffness: 500, damping: 30 }}
       >
         <LiquidGlass
-          width={50}
-          height={50}
+          width={70}
+          height={70}
           radius={100}
           depth={5}
           blur={0.5}

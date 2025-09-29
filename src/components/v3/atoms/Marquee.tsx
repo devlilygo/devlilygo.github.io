@@ -71,7 +71,7 @@ export default function Marquee() {
   const track = Array(3).fill(items).flat();
 
   return (
-    <div className="overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
+    <div className="overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)] pt-12">
       <motion.div
         className="flex gap-8 whitespace-nowrap will-change-transform"
         animate={{ x: ["0%", "-50%"] }}
