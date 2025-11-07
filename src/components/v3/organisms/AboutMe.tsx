@@ -22,7 +22,8 @@ const style = {
     "justify-start",
     "text-4xl",
     "md:text-6xl",
-    "lg:text-[175px]",
+    "lg:text-9xl",
+    "xl:text-[140px]",
     "leading-[0.8]",
     "tracking-[-0.1em]",
     "font-extralight",
@@ -49,17 +50,19 @@ const style = {
     "w-full",
     "h-full",
     "justify-start",
-    "text-sm",
+    "text-xs",
     "leading-5",
-    "md:text-lg",
-    "lg:text-xl",
-    "lg:leading-10",
-    "tracking-[-0.04em]",
+    "md:text-sm",
+    "xl:text-lg",
+    "md:leading-6",
+    "lg:leading-8",
+    "tracking-[-0.08em]",
     "font-light",
     "text-left",
     "text-[#364c84]",
-    "gap-6",
-    "lg:gap-2",
+    "md:gap-1",
+    "gap-0",
+    "xl:gap-4",
     "mt-10",
     "lg:mt-0",
     "p-2"
@@ -77,7 +80,7 @@ const AboutMe = () => {
           <span>YOU!</span>
         </div>
         <div className={style.descriptionArea}>
-          <div className="flex w-full h-[150px] lg:h-[350px] justify-center items-center lg:p-10 lg:pr-32 ">
+          <div className="flex w-full h-[150px] md:h-[170px] lg:h-[250px] justify-center items-center p-10 xl:mt-10 md:pr-32 ">
             <Image
               src="/v3/croissant.png"
               alt="croissant"

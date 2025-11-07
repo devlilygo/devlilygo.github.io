@@ -95,8 +95,8 @@ const style = {
     "lg:h-full",
     "w-full",
     "lg:w-1/2",
-    "text-6xl",
-    "lg:text-[140px]",
+    "text-6xl","md:text-7xl",
+    "lg:text-8xl",
     "font-bold",
     "items-start",
     "justify-center",
@@ -117,12 +117,12 @@ const style = {
     "p-5",
     "lg:pt-20",
     "lg:p-0",
-    "lg:pl-20",
+    // "lg:pl-20",
     "lg:pr-20",
     "mb-32",
-    "mt-20",
+    // "mt-20",
     "lg:mb-0",
-    "mb:mt-0"
+    "md:mt-20"
   ),
 };
 
