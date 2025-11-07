@@ -18,7 +18,7 @@ export default function TechStack({ data }: props) {
           ) : (
             <></>
           )}
-          <ul className="space-y-1 pl-6 text-sm md:text-lg leading-relaxed">
+          <ul className="space-y-1 pl-6 text-xs md:text-sm leading-relaxed">
             {section.items.map((item) => (
               <li key={item.name} className="whitespace-pre-line">
                 {section.category !== "Summary" ? (
@@ -29,7 +29,7 @@ export default function TechStack({ data }: props) {
                 {section.category !== "Summary" ? (
                   item.description
                 ) : (
-                  <span className="italic text-balance text-sm md:text-xl leading-loose">
+                  <span className="italic text-balance text-sm md:text-md lg:text-lg leading-loose">
                     {item.description}
                   </span>
                 )}

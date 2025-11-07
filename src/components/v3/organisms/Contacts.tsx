@@ -24,8 +24,9 @@ const style = {
     "justify-center",
     "rounded-full",
     "text-4xl",
-    "md:text-6xl",
-    "lg:text-[110px]",
+    "md:text-5xl",
+    "lg:text-6xl",
+    "xl:text-7xl",
     "leading-[0.6em]",
     "tracking-tighter",
     "font-black",
@@ -44,13 +45,14 @@ const style = {
     "font-semibold"
   ),
   descriptionArea: classNames(
-    "text-sm",
-    "lg:text-xl",
+    "text-xs",
+    "lg:text-sm",
+    "xl:text-md",
     "font-light",
     "flex",
     "flex-col",
-    "h-[300px]",
-    "md:h-full",
+    "h-[150px]",
+    "lg:h-[300px]",
     "overflow-auto",
     "lg:overflow-hidden",
     "lg:h-fit",
@@ -80,7 +82,7 @@ const Contacts = () => {
   };
   return (
     <div className={style.container}>
-      <div className="flex flex-col lg:flex-row h-4/5 w-full mt-32 p-12 items-center justify-center">
+      <div className="flex flex-col lg:flex-row md:h-3/5 h-4/5 w-full mt-32 p-12 items-center justify-center">
         <div className="flex flex-col h-full w-full gap-4 md:gap-2 lg:gap-0">
           <motion.div
             whileTap={{
@@ -93,7 +95,7 @@ const Contacts = () => {
           >
             <a
               className={style.text}
-              href="/LilyGo_RESUME_202509.pdf"
+              href="/LilyGo_RESUME.pdf"
               target="_blank"
             >
               RESUME
@@ -110,7 +112,7 @@ const Contacts = () => {
           >
             <a
               className={style.text}
-              href="/LilyGo_COVERLETTER_202509.pdf"
+              href="/LilyGo_COVERLETTER.pdf"
               target="_blank"
             >
               COVERLETTER
@@ -215,7 +217,7 @@ const Contacts = () => {
             className="flex"
           >
             <a
-              className={classNames(style.text, "hidden lg:flex")}
+              className={classNames(style.text, "flex")}
               // onClick={() => router.push("/lab")}
               href="https://lilygo.vercel.app/lab"
               target="_blank"

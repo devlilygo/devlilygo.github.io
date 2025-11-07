@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 
-const transition = { duration: 1.7, ease: "easeInOut", delay: 0.4 };
+const transition = { duration: 1.7, ease: "easeInOut" as const, delay: 0.4 };
 
 export default function OpeningAction() {
   return (
