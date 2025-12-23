@@ -20,7 +20,7 @@ const Hero = () => {
           pauseDuration={5000}
           showCursor={true}
           cursorCharacter="|"
-          className="text-white"
+          className="text-white text-base md:text-4xl"
         />
         <motion.div
           className="text-white flex items-center"
@@ -28,7 +28,7 @@ const Hero = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 3 }}
         >
-          <h1 className="bg-clip-text text-transparent bg-no-repeat bg-gradient-to-r from-[#1c8bc0] via-[#2dbae1] to-[#ffde70] py-4 text-6xl">
+          <h1 className="bg-clip-text text-transparent bg-no-repeat bg-gradient-to-r from-[#1c8bc0] via-[#2dbae1] to-[#ffde70] py-4 text-4xl md:text-6xl">
             Lily Go
           </h1>
         </motion.div>
