@@ -9,7 +9,7 @@ const CurrentWorks = () => {
           colors={["#40ffaa", "#4079ff", "#40ffaa", "#ffde70", "#40ffaa"]}
           animationSpeed={5}
           showBorder={false}
-          className="text-4xl font-semibold text-center h-96"
+          className="text-base md:text-4xl font-semibold text-center h-96"
         >
           What I am interested in thesedays are...
         </GradientText>
@@ -18,7 +18,7 @@ const CurrentWorks = () => {
           delay={150}
           animateBy="words"
           direction="top"
-          className="text-2xl"
+          className="text-base md:text-2xl"
         />
         {/* <BlurText>My AI WORKs will be updated soon...</BlurText> */}
       </div>
